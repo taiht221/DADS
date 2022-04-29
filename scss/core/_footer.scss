@@ -1,0 +1,42 @@
+// .footer {
+//   padding: 20px;
+//   font-family: 'Montserrat', sans-serif;
+//   font-weight: 600;
+//   font-size: 14px;
+//   line-height: 18px;
+//   &__left {
+//     span {
+//       display: block;
+//       &:nth-child(1) {
+//         font-weight: 700;
+//       }
+//     }
+//   }
+//   &__right {
+//     span {
+//       display: block;
+//       text-align: right;
+//     }
+//   }
+//   //   @include desktop {
+//   //   }
+//   //   @include tablet {
+//   //   }
+//   @include mobile {
+//     &__left {
+//       span {
+//         text-align: center;
+//         margin-bottom: 10px;
+//       }
+//     }
+//     &__right {
+//       span {
+//         margin-bottom: 10px;
+//         display: block;
+//         text-align: center;
+//       }
+//     }
+//   }
+//   //   @include mobile-xxs {
+//   //   }
+// }
