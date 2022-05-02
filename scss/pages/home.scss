@@ -32,13 +32,68 @@
       }
     }
   }
-  .tecnology {
-    margin-top: 10rem;
+  .aboutUs {
+    &-card {
+      min-height: 600px;
+      &__img {
+        object-fit: cover;
+        z-index: -10;
+      }
+    }
+    @include mobile {
+      .aboutUs-content {
+        flex-direction: column;
+        & > * {
+          width: 100%;
+        }
+      }
+    }
   }
-  .ourProject {
-    margin-top: 10rem;
-    &-text {
-      padding-left: 2rem;
+  .timeline {
+    & > * {
+      color: white;
+      max-height: 350px;
+      .timeline-dot {
+        background: #898989;
+        width: 40px;
+        height: 40px;
+      }
+      .timeline-content {
+        background-color: rgba(29, 26, 113, 0.3);
+      }
+      &:nth-child(odd) {
+        border-top: 2px solid #8840ea;
+        border-right: 2px solid #8840ea;
+        position: relative;
+        .timeline-dot {
+          background: #898989;
+          top: 0;
+          left: 50%;
+          transform: translate(-50%, -50%);
+          &.active {
+            background: #32cece;
+          }
+        }
+      }
+      &:nth-child(even) {
+        border-bottom: 2px solid #8840ea;
+        border-right: 2px solid #8840ea;
+        .timeline-dot {
+          background: #898989;
+          bottom: 0;
+          left: 50%;
+          transform: translate(-50%, 50%);
+          &.active {
+            background: #32cece;
+          }
+        }
+      }
+      &:last-child {
+        border-right: none;
+      }
+    }
+    .title {
+      color: #32cece;
     }
   }
 }
