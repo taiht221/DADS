@@ -1,0 +1,57 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply bg-[#141414] text-white !scrollbar-thin !scrollbar-track-transparent !scrollbar-thumb-red-600;
+  }
+  header {
+    @apply fixed top-0 z-50 flex w-full items-center justify-between p-4 transition-all lg:px-10 lg:py-6;
+  }
+}
+
+@layer components {
+  @keyframes circle {
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(360deg);
+    }
+  }
+
+  @keyframes inner-circle {
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(-360deg);
+    }
+  }
+
+  .move-ci {
+    animation: circle 5s linear infinite;
+    transform-origin: 50% 250px;
+  }
+
+  .move-circle {
+    animation: inner-circle 5s linear infinite;
+  }
+  .earth-shape {
+    @apply after:content-['']  after:absolute after:w-[70%] after:h-[70%] after:block after:top-[20%] after:left-0 after:bg-[#0D5781] after:opacity-30 after:z-[-10] after:rounded-full
+                    before:content-['']  before:absolute before:w-[70%] before:h-[70%] before:block before:top-[5%] before:right-0 before:bg-[#5F006D] before:opacity-30 before:z-[-10] before:rounded-full;
+  }
+  .translate-top {
+    transform: translate(-50%, -50%);
+  }
+  .translate-bottom {
+    transform: translate(-50%, 50%);
+  }
+  .timeline-content .title {
+    @apply text-[#32cece] md:text-2xl font-bold md:py-2;
+  }
+  .timeline-content p {
+    @apply md:text-sm font-extralight md:py-2 md:leading-normal;
+  }
+}

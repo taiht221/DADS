@@ -9,29 +9,29 @@
 @import '../core/footer';
 
 .homepage {
-  .banner {
-    height: 60vh;
-    .banner-bg {
-      height: 100vh;
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      z-index: -10;
-      img {
-        width: 100%;
-        height: 100%;
-        object-fit: contain;
-      }
-    }
-    .banner-text {
-      font-size: 36px;
-      margin: auto 0;
-      h1 {
-        line-height: 3.5rem;
-      }
-    }
-  }
+  // .banner {
+  //   height: 60vh;
+  //   .banner-bg {
+  //     height: 100vh;
+  //     position: absolute;
+  //     top: 0;
+  //     left: 0;
+  //     width: 100%;
+  //     z-index: -10;
+  //     img {
+  //       width: 100%;
+  //       height: 100%;
+  //       object-fit: contain;
+  //     }
+  //   }
+  //   .banner-text {
+  //     font-size: 36px;
+  //     margin: auto 0;
+  //     h1 {
+  //       line-height: 3.5rem;
+  //     }
+  //   }
+  // }
   .aboutUs {
     &-card {
       min-height: 600px;
@@ -49,51 +49,15 @@
       }
     }
   }
-  .timeline {
-    & > * {
-      color: white;
-      max-height: 350px;
-      .timeline-dot {
-        background: #898989;
-        width: 40px;
-        height: 40px;
-      }
-      .timeline-content {
-        background-color: rgba(29, 26, 113, 0.3);
-      }
-      &:nth-child(odd) {
-        border-top: 2px solid #8840ea;
-        border-right: 2px solid #8840ea;
-        position: relative;
-        .timeline-dot {
-          background: #898989;
-          top: 0;
-          left: 50%;
-          transform: translate(-50%, -50%);
-          &.active {
-            background: #32cece;
-          }
-        }
-      }
-      &:nth-child(even) {
-        border-bottom: 2px solid #8840ea;
-        border-right: 2px solid #8840ea;
-        .timeline-dot {
-          background: #898989;
-          bottom: 0;
-          left: 50%;
-          transform: translate(-50%, 50%);
-          &.active {
-            background: #32cece;
-          }
-        }
-      }
-      &:last-child {
-        border-right: none;
-      }
-    }
-    .title {
-      color: #32cece;
+  .timeline-content {
+    min-height: 235px;
+    background-color: rgba(29, 26, 113, 0.3);
+  }
+  .timeline-dot {
+    background: #898989;
+    left: 50%;
+    &.active {
+      background: #32cece;
     }
   }
 }

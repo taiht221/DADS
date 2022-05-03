@@ -59,3 +59,20 @@
 //     }
 //   }
 // }
+
+header.active {
+  background: #141414;
+  padding: 0 15px;
+  nav {
+    padding: unset;
+  }
+  .logo {
+    width: 150px;
+    height: 100px;
+    padding: unset;
+    padding-left: 20px;
+  }
+  ul li a {
+    font-size: 16px;
+  }
+}
