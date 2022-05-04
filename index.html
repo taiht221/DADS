@@ -16,12 +16,12 @@
 <body>
     <header class="relative transition-all active">
         <nav class="bg-transparent px-2 sm:px-4 py-2.5 w-full">
-            <div class="container-fluid flex flex-wrap items-center mx-auto justify-between">
-                <a href="#" class="flex items-center logo p-3">
+            <div class="container-fluid flex flex-wrap items-center mx-auto justify-between ">
+                <a href="#" class="flex items-center logo p-3 md:w-[unset] w-[30%]">
                     <img src="images/logo.svg" class="mr-3 md:h-full md:w-full h-10 w-20 " alt="DADS Logo">
                 </a>
                 <button data-collapse-toggle="mobile-menu" type="button"
-                    class="inline-flex hambuger items-center p-2 ml-3 text-sm text-white rounded-lg md:hidden "
+                    class="inline-flex hambuger items-center p-2 ml-3 text-sm text-white rounded-lg md:hidden md:w-[unset] w-max"
                     aria-controls="mobile-menu" aria-expanded="false">
                     <span class="sr-only">Open main menu</span>
                     <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
@@ -36,37 +36,37 @@
                             clip-rule="evenodd"></path>
                     </svg>
                 </button>
-                <div class="hidden flex-auto md:block md:w-auto" id="mobile-menu">
+                <div class="hidden flex-auto md:block md:w-auto w-full" id="mobile-menu">
                     <ul
                         class="flex flex-col mt-4 md:flex-row md:space-x-8 md:mt-0 md:text-2xl md:font-medium justify-center">
                         <li>
                             <a href="#"
-                                class="block py-2 pr-4 pl-3 text-blue-500 md:bg-transparent md:p-0  md:text-2xl hover:underline uppercase"
+                                class="block py-2 pr-4 pl-3 text-blue-500 md:bg-transparent md:p-0  md:text-2xl hover:underline uppercase text-center"
                                 aria-current="page">About us</a>
                         </li>
                         <li>
                             <a href="#"
-                                class="block py-2 pr-4 pl-3 text-white md:bg-transparent md:p-0  md:text-2xl hover:underline uppercase">PRODUCT</a>
+                                class="block py-2 pr-4 pl-3 text-white md:bg-transparent md:p-0  md:text-2xl hover:underline uppercase text-center">PRODUCT</a>
                         </li>
                         <li>
                             <a href="#"
-                                class="block py-2 pr-4 pl-3 text-white md:bg-transparent md:p-0  md:text-2xl hover:underline uppercase">ROADMAP</a>
+                                class="block py-2 pr-4 pl-3 text-white md:bg-transparent md:p-0  md:text-2xl hover:underline uppercase text-center">ROADMAP</a>
                         </li>
                         <li>
                             <a href="#"
-                                class="block py-2 pr-4 pl-3 text-white md:bg-transparent md:p-0  md:text-2xl hover:underline uppercase">INVESTOR</a>
+                                class="block py-2 pr-4 pl-3 text-white md:bg-transparent md:p-0  md:text-2xl hover:underline uppercase text-center">INVESTOR</a>
                         </li>
                         <li>
                             <a href="#"
-                                class="block py-2 pr-4 pl-3 text-white md:bg-transparent md:p-0  md:text-2xl hover:underline uppercase">TEAM</a>
+                                class="block py-2 pr-4 pl-3 text-white md:bg-transparent md:p-0  md:text-2xl hover:underline uppercase text-center">TEAM</a>
                         </li>
                         <li>
                             <a href="#"
-                                class="block py-2 pr-4 pl-3 text-white md:bg-transparent md:p-0  md:text-2xl hover:underline uppercase">NEWS</a>
+                                class="block py-2 pr-4 pl-3 text-white md:bg-transparent md:p-0  md:text-2xl hover:underline uppercase text-center">NEWS</a>
                         </li>
                         <li>
                             <a href="#"
-                                class="block py-2 pr-4 pl-3 text-white md:bg-transparent md:p-0  md:text-2xl hover:underline uppercase">Contact</a>
+                                class="block py-2 pr-4 pl-3 text-white md:bg-transparent md:p-0  md:text-2xl hover:underline uppercase text-center">Contact</a>
                         </li>
                     </ul>
                 </div>
@@ -76,7 +76,7 @@
     </header>
 
     <main class="homepage">
-        <div class="container w-8/12">
+        <div class="container md:w-8/12 w-full">
             <div class="banner flex flex-col md:flex-row h-[60vh] ">
                 <div class="banner-text md:w-1/2 flex flex-col justify-center space-y-5">
                     <h2 class="font-bold text-xl ">
@@ -97,9 +97,9 @@
             <div class="aboutUs md:mt-[10rem]">
                 <h2 class="text-white text-center uppercase font-bold py-5 mb-5 text-3xl">About US</h2>
                 <div class="flex aboutUs-content flex-col md:flex-row">
-                    <div class="aboutUs-text col-md-6">
+                    <div class="aboutUs-text mb-5 md:mb-0">
                         <h3 class="uppercase text-white font-bold text-xl pb-3">What is DADS?</h3>
-                        <p class="text-white font-light fs-5 text-left w-3/4">DADS is the native NEAR Data
+                        <p class="text-white font-light fs-5 text-left md:w-3/4">DADS is the native NEAR Data
                             Blockchain
                             to
                             accelerate the world's transition to DeData
@@ -107,15 +107,15 @@
                             Economy. It
                             is the Data Infrastructure for DeFi and Web 3.0 Powered by NEAR.</p>
                     </div>
-                    <div class="aboutUs-card relative flex flex-col items-center justify-center p-5 ">
+                    <div class="aboutUs-card relative flex flex-col md:items-center md:justify-center p-8">
                         <img src="images/about-layer.png" alt=""
-                            class="absolute top-0 left-0 w-100 h-100 aboutUs-card__img">
-                        <div class="aboutUs-card__content text-white h-full px-2 w-3/4 pt-3">
-                            <a class="md:w-[205px] md:h-[95px] p-3" href="#">
+                            class="absolute top-0 left-0 w-100 h-100 aboutUs-card__img object-cover">
+                        <div class="aboutUs-card__content text-white h-full px-2 md:w-3/4 md:pt-4">
+                            <a class="md:w-[205px] md:h-[95px] py-3 hidden md:block mx-auto md:mb-6" href="#">
                                 <img src="images/logo.svg" alt="DADS">
                             </a>
-                            <h3 class="text-white font-bold text-center my-3">Layer 1: Near</h3>
-                            <p class="text-white font-light">
+                            <h3 class="text-white font-bold text-center md:my-3">Layer 1: Near</h3>
+                            <p class="text-white font-light text-sm md:text-base">
                                 DADS is the native NEAR Data Blockchain to accelerate the world’s transition to
                                 DADS is the native NEAR Data Blockchain to accelerate the world’s transition to
                                 DADS is the native NEAR Data Blockchain to accelerate the world’s transition to
@@ -124,8 +124,8 @@
                     </div>
                 </div>
             </div>
-            <div class="flex flex-col items-center justify-center md:mt-[10rem]">
-                <div class="flex w-1/2">
+            <div class="flex flex-col items-center justify-center mt-[10rem]">
+                <div class="flex md:w-1/2">
                     <div class="ourProject-text">
                         <h2 class="text-white text-center uppercase font-bold title py-4 text-3xl">OUR PROJECT
                         </h2>
@@ -138,15 +138,15 @@
                             is the Data Infrastructure for DeFi and Web 3.0 Powered by NEAR.</p>
                     </div>
                 </div>
-                <div class="w-1/2 ">
+                <div class="md:w-1/2 ">
                     <iframe width="100%" height="100%" src="https://www.youtube.com/embed/te9JalT1k5s"
                         title="YouTube video player" frameborder="0"
                         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                         allowfullscreen></iframe>
                 </div>
             </div>
-            <div class="flex flex-col items-center justify-center md:mt-[10rem]">
-                <div class="flex w-3/4">
+            <div class="flex flex-col items-center justify-center mt-[10rem]">
+                <div class="flex md:w-3/4">
                     <div class="ourProject-text">
                         <h2 class="text-white text-center uppercase font-bold title py-4 text-3xl">product
                         </h2>
@@ -159,18 +159,18 @@
                             is the Data Infrastructure for DeFi and Web 3.0 Powered by NEAR.</p>
                     </div>
                 </div>
-                <div class="w-3/4 flex items-center justify-between">
-                    <div class="main-btn flex flex-col w-1/4 items-center justify-between">
+                <div class="md:w-3/4 flex flex-col md:flex-row items-center justify-between">
+                    <div class="main-btn flex flex-col items-center justify-between ">
                         <img src="images/advertiser.svg" alt="" class="logo-btn mb-4">
                         <a href="#"
                             class="uppercase text-white font-bold py-2 px-4 rounded-md text-center border-dashed m-auto ">Advertiser</a>
                     </div>
-                    <div class="main-btn flex flex-col w-1/4 items-center justify-between">
+                    <div class="main-btn flex flex-col items-center justify-between">
                         <img src="images/pulisher.svg" alt="" class="logo-btn mb-4">
                         <a href="#"
                             class="uppercase text-white font-bold py-2 px-4 rounded-md text-center border-dashed m-auto ">Advertiser</a>
                     </div>
-                    <div class="main-btn flex flex-col w-1/4 items-center justify-between">
+                    <div class="main-btn flex flex-col items-center justify-between">
                         <img src="images/user.svg" alt="" class="logo-btn mb-4">
                         <a href="#"
                             class="uppercase text-white font-bold py-2 px-4 rounded-md text-center border-dashed m-auto ">Advertiser</a>

@@ -39,6 +39,9 @@
         object-fit: cover;
         z-index: -10;
       }
+      @include mobile {
+        min-height: unset;
+      }
     }
     @include mobile {
       .aboutUs-content {
