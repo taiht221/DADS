@@ -40,7 +40,7 @@ import '../scss/pages/home.scss'
   console.log(window.scrollY)
 
   const handleScroll = () => {
-    if (window.scrollY > 100) {
+    if (window.scrollY >= 100) {
       header.classList.remove('relative')
       header.classList.add('active')
     } else {
