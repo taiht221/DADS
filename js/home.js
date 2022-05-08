@@ -28,6 +28,7 @@ import '../scss/pages/home.scss'
         slidesPerView: 4,
       },
     },
+    allowTouchMove: false,
   })
 
   function toggleNav() {

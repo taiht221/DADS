@@ -26,7 +26,7 @@
       transform: rotate(0deg);
     }
     to {
-      transform: rotate(-360deg);
+      transform: rotate(360deg);
     }
   }
 
@@ -36,7 +36,7 @@
   }
 
   .move-circle {
-    animation: inner-circle 5s linear infinite;
+    animation: inner-circle 15s linear infinite;
   }
   .earth-shape {
     @apply after:content-['']  after:absolute after:w-[70%] after:h-[70%] after:block after:top-[20%] after:left-0 after:bg-[#0D5781] after:opacity-30 after:z-[-10] after:rounded-full
