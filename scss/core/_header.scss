@@ -59,10 +59,10 @@
 //     }
 //   }
 // }
-
 header.active {
   background: #141414;
   padding: 0 15px;
+  transition: all 0.2s;
   nav {
     padding: unset;
   }
