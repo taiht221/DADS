@@ -4,7 +4,7 @@
 
 @layer base {
   body {
-    @apply bg-[#141414] text-white !scrollbar-thin !scrollbar-track-transparent !scrollbar-thumb-blue-800;
+    @apply bg-[#141414] text-white !scrollbar-thin !scrollbar-track-transparent !scrollbar-thumb-white;
   }
   header {
     @apply fixed top-0 z-50 flex w-full items-center justify-between p-4 transition-all lg:px-10 lg:py-6;
@@ -26,7 +26,7 @@
       transform: rotate(0deg);
     }
     to {
-      transform: rotateY(360deg);
+      transform: rotate(360deg);
     }
   }
 
