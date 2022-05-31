@@ -63,4 +63,42 @@
       background: #32cece;
     }
   }
+  .earth {
+    width: 400px;
+    height: 400px;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    overflow: hidden;
+    border-radius: 50%;
+    box-shadow: 0 0 20px 20px rgb(37, 14, 152) inset,
+      0 0 20px 2px rgb(14, 42, 118);
+  }
+
+  .earth:after {
+    position: absolute;
+    content: '';
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    box-shadow: -20px -20px 50px 2px rgb(54, 24, 116) inset;
+    border-radius: 50%;
+  }
+
+  .earth > div {
+    width: 200%;
+    height: 100%;
+    animation: spin 30s linear alternate infinite;
+    background: url(https://i.ibb.co/TcY4Ktm/z3457339063038-fba4cba409abcc4c2938f6e6db54512b.jpg);
+    /*orginal image at https://upload.wikimedia.org/wikipedia/commons/thumb/c/c4/Earthmap1000x500compac.jpg/640px-Earthmap1000x500compac.jpg */
+    background-size: cover;
+  }
+  @keyframes spin {
+    to {
+      transform: translateX(-50%);
+    }
+  }
 }
