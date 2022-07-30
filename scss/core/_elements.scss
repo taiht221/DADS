@@ -110,9 +110,16 @@
 .main-btn {
   transition: all 400ms;
   font-size: 20px;
+  @include mobile {
+    font-size: 10px;
+  }
   .logo-btn {
     width: 75px;
     height: 116px;
+    @include mobile {
+      width: 35px;
+      height: 46px;
+    }
   }
   a {
     border: 1px solid #d953f6;
