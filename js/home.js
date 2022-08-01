@@ -6,10 +6,6 @@ import '../scss/pages/home.scss'
     spaceBetween: 0,
     slidesPerView: 4,
     centeredSlides: true,
-    autoplay: {
-      delay: 1000,
-      disableOnInteraction: false,
-    },
     isFinite: true,
     speed: 500,
     loop: true,
@@ -28,7 +24,11 @@ import '../scss/pages/home.scss'
         slidesPerView: 4,
       },
     },
-    allowTouchMove: false,
+    allowTouchMove: true,
+    navigation: {
+      nextEl: '.swiper-button-next',
+      prevEl: '.swiper-button-prev',
+    },
   })
 
   function toggleNav() {
