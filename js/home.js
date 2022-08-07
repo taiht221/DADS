@@ -5,11 +5,11 @@ import '../scss/pages/home.scss'
   var swiper = new Swiper('.mySwiper', {
     spaceBetween: 0,
     slidesPerView: 4,
-    centeredSlides: true,
+    centeredSlides: false,
     isFinite: true,
     speed: 500,
-    loop: true,
-    loopFillGroupWithBlank: true,
+    loop: false,
+    loopFillGroupWithBlank: false,
     breakpoints: {
       // when window width is >= 320px
       320: {
@@ -37,17 +37,4 @@ import '../scss/pages/home.scss'
     })
   }
   toggleNav()
-
-  console.log(window.scrollY)
-
-  const handleScroll = () => {
-    if (window.scrollY >= 100) {
-      header.classList.remove('relative')
-      header.classList.add('active')
-    } else {
-      header.classList.add('relative')
-      header.classList.remove('active')
-    }
-  }
-  window.addEventListener('scroll', handleScroll)
 })()

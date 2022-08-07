@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="scroll-smooth">
 
 <head>
     <meta charset="UTF-8">
@@ -10,16 +10,16 @@
         rel="stylesheet">
     <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
     <link rel="shortcut icon" type="image/x-icon" href="https://news-admin.dadsnetwork.net/favicon.ico">
-
-    <link rel="stylesheet" href="/input.css">
+    <link rel="stylesheet" href="https://unpkg.com/flowbite@1.5.1/dist/flowbite.min.css" />
+    <link rel="stylesheet" href="./input.css">
 </head>
 
 <body>
-    <header class="relative">
-        <nav class="bg-transparent px-2 sm:px-4 py-2.5 w-full">
+    <header class="active bg-[#141414] p-0 text-base">
+        <nav class="bg-transparent  sm:px-4 w-full">
             <div class="container-fluid flex flex-wrap items-center mx-auto justify-between">
-                <a href="#" class="flex items-center logo p-3 md:w-[unset] w-[30%]">
-                    <img src="images/logo.svg" class="mr-3 md:h-full md:w-full h-8 w-18 " alt="DADS Logo">
+                <a href="#" class="flex items-center logo md:w-[150px] md:h-[100px] ">
+                    <img src="./images/logo.svg" class="mr-3 md:h-full md:w-full" alt="DADS Logo">
                 </a>
                 <button data-collapse-toggle="mobile-menu" type="button"
                     class="inline-flex hambuger items-center p-2 ml-3 text-sm text-white rounded-lg md:hidden md:w-[unset] w-max"
@@ -38,38 +38,38 @@
                     </svg>
                 </button>
 
-                <div class="hidden flex-auto md:block md:w-auto w-full " id="mobile-menu">
+                <div class="hidden flex-auto md:block md:w-4/6 w-full " id="mobile-menu">
                     <ul
-                        class="flex flex-col mt-4 md:flex-row md:space-x-8 md:mt-0 md:text-2xl md:font-medium justify-center">
+                        class="flex flex-col mt-4 md:flex-row md:space-x-8 md:mt-0 md:text-base md:font-medium justify-center">
                         <li>
-                            <a href="#"
-                                class="block py-2 pr-4 pl-3 text-blue-500 md:bg-transparent md:p-0  md:text-2xl hover:underline uppercase text-center"
+                            <a href="#aboutus"
+                                class="block py-2 pr-4 pl-3 text-white md:bg-transparent md:p-0  md:text-base hover:underline uppercase text-center"
                                 aria-current="page">About us</a>
                         </li>
                         <li>
+                            <a href="#product"
+                                class="block py-2 pr-4 pl-3 text-white md:bg-transparent md:p-0  md:text-base hover:underline uppercase text-center">PRODUCT</a>
+                        </li>
+                        <li>
+                            <a href="#roadmap"
+                                class="block py-2 pr-4 pl-3 text-white md:bg-transparent md:p-0  md:text-base hover:underline uppercase text-center">ROADMAP</a>
+                        </li>
+                        <!-- <li>
                             <a href="#"
-                                class="block py-2 pr-4 pl-3 text-white md:bg-transparent md:p-0  md:text-2xl hover:underline uppercase text-center">PRODUCT</a>
+                                class="block py-2 pr-4 pl-3 text-white md:bg-transparent md:p-0  md:text-base hover:underline uppercase text-center">INVESTOR</a>
                         </li>
                         <li>
                             <a href="#"
-                                class="block py-2 pr-4 pl-3 text-white md:bg-transparent md:p-0  md:text-2xl hover:underline uppercase text-center">ROADMAP</a>
+                                class="block py-2 pr-4 pl-3 text-white md:bg-transparent md:p-0  md:text-base hover:underline uppercase text-center">TEAM</a>
                         </li>
                         <li>
                             <a href="#"
-                                class="block py-2 pr-4 pl-3 text-white md:bg-transparent md:p-0  md:text-2xl hover:underline uppercase text-center">INVESTOR</a>
-                        </li>
-                        <li>
+                                class="block py-2 pr-4 pl-3 text-white md:bg-transparent md:p-0  md:text-base hover:underline uppercase text-center">NEWS</a>
+                        </li> -->
+                        <!-- <li>
                             <a href="#"
-                                class="block py-2 pr-4 pl-3 text-white md:bg-transparent md:p-0  md:text-2xl hover:underline uppercase text-center">TEAM</a>
-                        </li>
-                        <li>
-                            <a href="#"
-                                class="block py-2 pr-4 pl-3 text-white md:bg-transparent md:p-0  md:text-2xl hover:underline uppercase text-center">NEWS</a>
-                        </li>
-                        <li>
-                            <a href="#"
-                                class="block py-2 pr-4 pl-3 text-white md:bg-transparent md:p-0  md:text-2xl hover:underline uppercase text-center">Contact</a>
-                        </li>
+                                class="block py-2 pr-4 pl-3 text-white md:bg-transparent md:p-0  md:text-base hover:underline uppercase text-center">Contact</a>
+                        </li> -->
                     </ul>
                 </div>
             </div>
@@ -77,22 +77,55 @@
 
     </header>
 
-    <main class="homepage">
+    <main class="homepage pt-[20vh]">
         <div class="container md:w-8/12 w-full">
             <section class="banner flex flex-col md:flex-row h-[60vh] ">
                 <div class="banner-text md:w-1/2 flex flex-col justify-center space-y-5">
-                    <h2 class="font-bold text-xl ">
-                        Reinvent<br>
-                        web3 advertising
+                    <h2 class="font-bold text-[50px] sologan uppercase">
+                        Reinvent Web3 <br> Advertising
                     </h2>
-                    <p class="text-1xl font-light rounded-md  py-2 md:w-[300px]">
+                    <p class="text-1xl font-light rounded-md  py-2 ">
                         A multi-chain web3 ad platform accelerating decentralized
                         interactions between users, publishers and advertisers.
                     </p>
+                    <div class="flex space-x-5">
+
+                        <button class="bg-white text-2xl text-[#0000FF] rounded-md px-4 py-2.5 font-medium">
+                            See More
+                        </button>
+                        <button id="dropdownDefault" data-dropdown-toggle="dropdown"
+                            class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-2xl px-4 py-2.5 text-center inline-flex items-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
+                            type="button">Join now <svg class="ml-2 w-4 h-4" aria-hidden="true" fill="none"
+                                stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M19 9l-7 7-7-7"></path>
+                            </svg></button>
+                        <!-- Dropdown menu -->
+                        <div id="dropdown"
+                            class="hidden z-10 w-44 bg-white rounded divide-y divide-gray-100 shadow dark:bg-gray-700">
+                            <ul class="py-1 text-sm text-gray-700 dark:text-gray-200" aria-labelledby="dropdownDefault">
+                                <li>
+                                    <a href="#"
+                                        class="block py-2 px-4 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">For
+                                        advertisers</a>
+                                </li>
+                                <li>
+                                    <a href="#"
+                                        class="block py-2 px-4 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">For
+                                        Publishers</a>
+                                </li>
+                                <li>
+                                    <a href="#"
+                                        class="block py-2 px-4 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">For
+                                        users</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
                 </div>
                 <!-- <div class="banner-earth relative md:w-1/2 earth-shape">
-                    <img src="images/earth.png" alt="" class="absolute top-0 move-circle">
-                    <img src="images/turn.png" alt=""
+                    <img src="./images/earth.png" alt="" class="absolute top-0 move-circle">
+                    <img src="./images/turn.png" alt=""
                         class="absolute top-[0] right-1/2 w-14 h-14 z-10 opacity-70 hidden md:block">
                 </div> -->
                 <div class="md:w-1/2">
@@ -102,7 +135,7 @@
                 </div>
 
             </section>
-            <section class="aboutUs md:mt-[10rem] mt-2">
+            <section class="aboutUs md:mt-[10rem] mt-2" id="aboutus">
                 <h2 class="text-white text-center uppercase font-bold py-5 mb-5 text-2xl md:text-5xl">About US</h2>
                 <div class="flex aboutUs-content flex-col md:flex-row ">
                     <div class="aboutUs-text mb-5 md:mb-0 md:w-1/2 md:pt-10">
@@ -130,12 +163,12 @@
 
                     </div>
                     <div
-                        class="aboutUs-card relative p-[35px] bg-[url('images/about-layer.png')] bg-no-repeat md:w-1/2 hidden md:block">
-                        <!-- <img src="images/about-layer.png" alt=""
+                        class="aboutUs-card relative p-[35px] bg-[url('./images/about-layer.png')] bg-no-repeat md:w-1/2 hidden md:block">
+                        <!-- <img src="./images/about-layer.png" alt=""
                             class="absolute top-0 left-0 w-100 h-100 aboutUs-card__img object-cover"> -->
                         <div class="aboutUs-card__content text-white h-[80%] md:w-[60%] m-auto">
                             <a class="md:w-[185px] md:h-[80px] pb-3 hidden md:block mx-auto md:mb-6 mt-[35px]" href="#">
-                                <img src="images/logo.svg" alt="DADS">
+                                <img src="./images/logo.svg" alt="DADS">
                             </a>
                             <!-- <h3 class="text-white font-bold text-center md:my-3">Layer 1: Near</h3> -->
                             <p class="text-white font-light text-sm md:text-base">
@@ -147,7 +180,7 @@
                     </div>
                 </div>
             </section>
-            <section class="flex flex-col items-center justify-center md:mt-[10rem] mt-2">
+            <section class="flex flex-col items-center justify-center md:mt-[10rem] mt-2" id="product">
                 <div class="flex md:w-1/2">
                     <div class="ourProject-text">
                         <h2 class="text-white text-center uppercase font-bold title py-4 text-2xl md:text-5xl">OUR
@@ -178,163 +211,165 @@
                 </div>
                 <div class="md:w-3/4 flex md:flex-row md:items-center justify-between space-x-5 md:space-x-0">
                     <div class="main-btn flex flex-col items-center justify-between ">
-                        <img src="images/advertiser.svg" alt="" class="logo-btn mb-4">
+                        <img src="./images/advertiser.svg" alt="" class="logo-btn mb-4">
                         <a href="#"
                             class="uppercase text-white font-bold md:py-2 md:px-4 py-1 px-2 rounded-md text-center border-dashed m-auto ">Advertiser</a>
                     </div>
                     <div class="main-btn flex flex-col items-center justify-between">
-                        <img src="images/pulisher.svg" alt="" class="logo-btn mb-4">
+                        <img src="./images/pulisher.svg" alt="" class="logo-btn mb-4">
                         <a href="#"
                             class="uppercase text-white font-bold md:py-2 md:px-4 py-1 px-2 rounded-md text-center border-dashed m-auto ">Publisher</a>
                     </div>
                     <div class="main-btn flex flex-col items-center justify-between">
-                        <img src="images/user.svg" alt="" class="logo-btn mb-4">
+                        <img src="./images/user.svg" alt="" class="logo-btn mb-4">
                         <a href="#"
                             class="uppercase text-white font-bold md:py-2 md:px-4 py-1 px-2 rounded-md text-center border-dashed m-auto ">User</a>
                     </div>
                 </div>
             </section>
         </div>
-        <section class="container md:mt-[10rem]">
+        <section class="container md:mt-[10rem] " id="roadmap">
             <h3 class="text-white text-center uppercase font-bold title py-4 text-2xl md:text-5xl">DADS ROADMAP
             </h3>
-            <div class="swiper mySwiper">
-                <div class="swiper-wrapper">
-                    <div class="swiper-slide pt-5 ">
-                        <div class="p-4 relative border-t-2 border-t-[#8840ea] ">
-                            <div class="timeline-content flex flex-col rounded-3 p-2    ">
-                                <h3 class="text-center title">Q1-2022</h3>
-                                <p>
-                                    Team founded <br>
-                                    Product idea & Market Research<br>
-                                    Business Strategy
-                                </p>
-                            </div>
-                            <div
-                                class="timeline-dot bg-[#898989] w-[30px] h-[30px] absolute rounded-full active top-0 translate-top">
+            <div class="relative">
+                <div class="swiper mySwiper ">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide pt-5 ">
+                            <div class="p-4 relative border-t-2 border-t-[#8840ea] ">
+                                <div class="timeline-content flex flex-col rounded-3 p-2    ">
+                                    <h3 class="text-center title">Q1-2022</h3>
+                                    <p>
+                                        Team founded <br>
+                                        Product idea & Market Research<br>
+                                        Business Strategy
+                                    </p>
+                                </div>
+                                <div
+                                    class="timeline-dot bg-[#898989] w-[30px] h-[30px] absolute rounded-full active top-0 translate-top">
 
+                                </div>
                             </div>
                         </div>
-                    </div>
-                    <div class="swiper-slide pb-5">
-                        <div class="p-4 relative border-b-2 border-b-[#8840ea]">
-                            <div class="timeline-content flex flex-col rounded-3 p-2">
-                                <h3 class="text-center title">Q2-2022</h3>
-                                <p>
-                                    Ad Exchange development<br>
-                                    News platform development <br>
-                                    Whitepaper<br>
-                                    Docs & Business Plan
-                                </p>
-                            </div>
-                            <div
-                                class="timeline-dot bg-[#898989] w-[30px] h-[30px] absolute rounded-full active bottom-0 translate-bottom">
+                        <div class="swiper-slide pb-5">
+                            <div class="p-4 relative border-b-2 border-b-[#8840ea]">
+                                <div class="timeline-content flex flex-col rounded-3 p-2">
+                                    <h3 class="text-center title">Q2-2022</h3>
+                                    <p>
+                                        Ad Exchange development<br>
+                                        News platform development <br>
+                                        Whitepaper<br>
+                                        Docs & Business Plan
+                                    </p>
+                                </div>
+                                <div
+                                    class="timeline-dot bg-[#898989] w-[30px] h-[30px] absolute rounded-full active bottom-0 translate-bottom">
 
+                                </div>
                             </div>
                         </div>
-                    </div>
-                    <div class="swiper-slide pt-5">
-                        <div class="p-4 relative border-t-2 border-t-[#8840ea] ">
-                            <div class="timeline-content flex flex-col rounded-3 p-2">
-                                <h3 class="text-center title">Q3-2022</h3>
-                                <p>
-                                    Testnet ad server v1 on Aurora, ETH, BSC <br>
-                                    Angel / seed round<br>
-                                    Social campaign phrase 1 <br>
-                                    Pushlishers & Advertisers development<br>
-                                    Users reward development
-                                </p>
-                            </div>
-                            <div
-                                class="timeline-dot bg-[#898989] w-[30px] h-[30px] absolute rounded-full  top-0 translate-top">
+                        <div class="swiper-slide pt-5">
+                            <div class="p-4 relative border-t-2 border-t-[#8840ea] ">
+                                <div class="timeline-content flex flex-col rounded-3 p-2">
+                                    <h3 class="text-center title">Q3-2022</h3>
+                                    <p>
+                                        Testnet ad server v1 on Aurora, ETH, BSC <br>
+                                        Angel / seed round<br>
+                                        Social campaign phrase 1 <br>
+                                        Pushlishers & Advertisers development<br>
+                                        Users reward development
+                                    </p>
+                                </div>
+                                <div
+                                    class="timeline-dot bg-[#898989] w-[30px] h-[30px] absolute rounded-full  top-0 translate-top">
 
+                                </div>
                             </div>
                         </div>
-                    </div>
-                    <div class="swiper-slide pb-5">
-                        <div class="p-4 relative border-b-2 border-b-[#8840ea]">
-                            <div class="timeline-content flex flex-col rounded-3 p-2">
-                                <h3 class="text-center title">Q4-2022</h3>
-                                <p>
-                                    Private round/ Pre-sale/ Public sale<br>
-                                    Staking feature<br>
-                                    Update ads server v1.1 <br>
-                                    Social campaign phrase 2
-                                </p>
-                            </div>
-                            <div
-                                class="timeline-dot bg-[#898989] w-[30px] h-[30px] absolute rounded-full  bottom-0 translate-bottom">
+                        <div class="swiper-slide pb-5">
+                            <div class="p-4 relative border-b-2 border-b-[#8840ea]">
+                                <div class="timeline-content flex flex-col rounded-3 p-2">
+                                    <h3 class="text-center title">Q4-2022</h3>
+                                    <p>
+                                        Private round/ Pre-sale/ Public sale<br>
+                                        Staking feature<br>
+                                        Update ads server v1.1 <br>
+                                        Social campaign phrase 2
+                                    </p>
+                                </div>
+                                <div
+                                    class="timeline-dot bg-[#898989] w-[30px] h-[30px] absolute rounded-full  bottom-0 translate-bottom">
 
+                                </div>
                             </div>
                         </div>
-                    </div>
-                    <div class="swiper-slide pt-5">
-                        <div class="p-4 relative border-t-2 border-t-[#8840ea] ">
-                            <div class="timeline-content flex flex-col rounded-3 p-2">
-                                <h3 class="text-center title">Q1-2023</h3>
-                                <p>
-                                    Update ads server v2.0 (CPC)<br>
-                                    Extend revenue from ads server<br>
-                                    Social campaign phrase 3 <br>
-                                </p>
-                            </div>
-                            <div
-                                class="timeline-dot bg-[#898989] w-[30px] h-[30px] absolute rounded-full  top-0 translate-top">
+                        <div class="swiper-slide pt-5">
+                            <div class="p-4 relative border-t-2 border-t-[#8840ea] ">
+                                <div class="timeline-content flex flex-col rounded-3 p-2">
+                                    <h3 class="text-center title">Q1-2023</h3>
+                                    <p>
+                                        Update ads server v2.0 (CPC)<br>
+                                        Extend revenue from ads server<br>
+                                        Social campaign phrase 3 <br>
+                                    </p>
+                                </div>
+                                <div
+                                    class="timeline-dot bg-[#898989] w-[30px] h-[30px] absolute rounded-full  top-0 translate-top">
 
+                                </div>
                             </div>
                         </div>
-                    </div>
-                    <div class="swiper-slide pb-5">
-                        <div class="p-4 relative border-b-2 border-b-[#8840ea]">
-                            <div class="timeline-content flex flex-col rounded-3 p-2">
-                                <h3 class="text-center title">Q2-2023</h3>
-                                <p>
-                                    Ads job development<br>
-                                    Mobile app ad sever development <br>
-                                    Social campaign phrase 4
-                                </p>
-                            </div>
-                            <div
-                                class="timeline-dot bg-[#898989] w-[30px] h-[30px] absolute rounded-full  bottom-0 translate-bottom">
+                        <div class="swiper-slide pb-5">
+                            <div class="p-4 relative border-b-2 border-b-[#8840ea]">
+                                <div class="timeline-content flex flex-col rounded-3 p-2">
+                                    <h3 class="text-center title">Q2-2023</h3>
+                                    <p>
+                                        Ads job development<br>
+                                        Mobile app ad sever development <br>
+                                        Social campaign phrase 4
+                                    </p>
+                                </div>
+                                <div
+                                    class="timeline-dot bg-[#898989] w-[30px] h-[30px] absolute rounded-full  bottom-0 translate-bottom">
 
+                                </div>
                             </div>
                         </div>
-                    </div>
-                    <div class="swiper-slide pt-5">
-                        <div class="p-4 relative border-t-2 border-t-[#8840ea] ">
-                            <div class="timeline-content flex flex-col rounded-3 p-2">
-                                <h3 class="text-center title">Q3-2023</h3>
-                                <p>
-                                    App development<br>
-                                    New ads solution development (CPA)<br>
-                                </p>
-                            </div>
-                            <div
-                                class="timeline-dot bg-[#898989] w-[30px] h-[30px] absolute rounded-full  top-0 translate-top">
+                        <div class="swiper-slide pt-5">
+                            <div class="p-4 relative border-t-2 border-t-[#8840ea] ">
+                                <div class="timeline-content flex flex-col rounded-3 p-2">
+                                    <h3 class="text-center title">Q3-2023</h3>
+                                    <p>
+                                        App development<br>
+                                        New ads solution development (CPA)<br>
+                                    </p>
+                                </div>
+                                <div
+                                    class="timeline-dot bg-[#898989] w-[30px] h-[30px] absolute rounded-full  top-0 translate-top">
 
+                                </div>
                             </div>
                         </div>
-                    </div>
-                    <div class="swiper-slide pb-5">
-                        <div class="p-4 relative border-b-2 border-b-[#8840ea]">
-                            <div class="timeline-content flex flex-col rounded-3 p-2">
-                                <h3 class="text-center title">Q4-2023</h3>
-                                <p>
-                                    Fully decentralized platform DAO
-                                </p>
-                            </div>
-                            <div
-                                class="timeline-dot bg-[#898989] w-[30px] h-[30px] absolute rounded-full  bottom-0 translate-bottom">
+                        <div class="swiper-slide pb-5">
+                            <div class="p-4 relative border-b-2 border-b-[#8840ea]">
+                                <div class="timeline-content flex flex-col rounded-3 p-2">
+                                    <h3 class="text-center title">Q4-2023</h3>
+                                    <p>
+                                        Fully decentralized platform DAO
+                                    </p>
+                                </div>
+                                <div
+                                    class="timeline-dot bg-[#898989] w-[30px] h-[30px] absolute rounded-full  bottom-0 translate-bottom">
 
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
+                <div class="swiper-button-next text-white opacity-70"></div>
+                <div class="swiper-button-prev text-white opacity-70"></div>
             </div>
-            <div class="swiper-button-next"></div>
-            <div class="swiper-button-prev"></div>
         </section>
-        <section class="container mt-[10rem]">
+        <!-- <section class="container mt-[10rem]">
             <div class="flex flex-col md:w-4/5 items-center justify-center mx-auto">
                 <h2 class="text-white text-center uppercase font-bold title py-4 text-2xl md:text-5xl">INVESTOR
                 </h2>
@@ -360,7 +395,7 @@
 
                 </div>
             </div>
-        </section>
+        </section> -->
         <!-- <section class="container mt-[10rem] team-dads">
             <div class="flex flex-col md:w-3/4 justify-center mx-auto">
                 <h2 class="text-white text-center uppercase font-bold title py-4 text-2xl md:text-5xl">Team dads
@@ -374,13 +409,13 @@
                     <div class="flex space-x-5">
                         <div class="flex flex-col">
                             <div class="md:w-[200px] md:h-[200px] w-10 h-10  rounded-full">
-                                <img src="images/avatar.png" alt="">
+                                <img src="./images/avatar.png" alt="">
                             </div>
                             <span class="mt-4 text-center text-xl text-[#32cece] font-bold">Maven</span>
                         </div>
                         <div class="flex flex-col">
                             <div class="md:w-[200px] md:h-[200px] w-10 h-10 bg-white rounded-full">
-                                <img src="images/avatar.png" alt="">
+                                <img src="./images/avatar.png" alt="">
                             </div>
                             <span class="mt-4 text-center text-xl text-[#32cece] font-bold">John Doe</span>
                         </div>
@@ -395,25 +430,25 @@
                     <div class="flex space-x-5">
                         <div class="flex flex-col">
                             <div class="md:w-[200px] md:h-[200px] w-10 h-10 bg-white rounded-full">
-                                <img src="images/avatar.png" alt="">
+                                <img src="./images/avatar.png" alt="">
                             </div>
                             <span class="mt-4 text-center text-xl text-[#32cece] font-bold">Maven</span>
                         </div>
                         <div class="flex flex-col">
                             <div class="md:w-[200px] md:h-[200px] w-10 h-10 bg-white rounded-full">
-                                <img src="images/avatar.png" alt="">
+                                <img src="./images/avatar.png" alt="">
                             </div>
                             <span class="mt-4 text-center text-xl text-[#32cece] font-bold">Maven</span>
                         </div>
                         <div class="flex flex-col">
                             <div class="md:w-[200px] md:h-[200px] w-10 h-10 bg-white rounded-full">
-                                <img src="images/avatar.png" alt="">
+                                <img src="./images/avatar.png" alt="">
                             </div>
                             <span class="mt-4 text-center text-xl text-[#32cece] font-bold">Maven</span>
                         </div>
                         <div class="flex flex-col">
                             <div class="md:w-[200px] md:h-[200px] w-10 h-10 bg-white rounded-full">
-                                <img src="images/avatar.png" alt="">
+                                <img src="./images/avatar.png" alt="">
                             </div>
                             <span class="mt-4 text-center text-xl text-[#32cece] font-bold">Maven</span>
                         </div>
@@ -428,25 +463,25 @@
                     <div class="flex space-x-5">
                         <div class="flex flex-col">
                             <div class="md:w-[200px] md:h-[200px] w-10 h-10 bg-white rounded-full">
-                                <img src="images/avatar.png" alt="">
+                                <img src="./images/avatar.png" alt="">
                             </div>
                             <span class="mt-4 text-center text-xl text-[#32cece] font-bold">Maven</span>
                         </div>
                         <div class="flex flex-col">
                             <div class="md:w-[200px] md:h-[200px] w-10 h-10 bg-white rounded-full">
-                                <img src="images/avatar.png" alt="">
+                                <img src="./images/avatar.png" alt="">
                             </div>
                             <span class="mt-4 text-center text-xl text-[#32cece] font-bold">Maven</span>
                         </div>
                         <div class="flex flex-col">
                             <div class="md:w-[200px] md:h-[200px] w-10 h-10 bg-white rounded-full">
-                                <img src="images/avatar.png" alt="">
+                                <img src="./images/avatar.png" alt="">
                             </div>
                             <span class="mt-4 text-center text-xl text-[#32cece] font-bold">Maven</span>
                         </div>
                         <div class="flex flex-col">
                             <div class="md:w-[200px] md:h-[200px] w-10 h-10 bg-white rounded-full">
-                                <img src="images/avatar.png" alt="">
+                                <img src="./images/avatar.png" alt="">
                             </div>
                             <span class="mt-4 text-center text-xl text-[#32cece] font-bold">Maven</span>
                         </div>
@@ -455,7 +490,7 @@
             </div>
 
         </section> -->
-        <section class="container mt-[10rem] ">
+        <!-- <section class="container mt-[10rem] ">
             <h2 class="text-white text-center uppercase font-bold title py-4 text-2xl md:text-5xl">news
             </h2>
             <div class="flex md:w-3/4 justify-center mx-auto space-x-3 flex-col md:flex-row space-y-10 md:space-y-0">
@@ -480,16 +515,16 @@
                 </div>
             </div>
 
-        </section>
+        </section> -->
     </main>
     <footer class="py-5 mt-[10rem] relative">
 
-        <img src="images/f-banner.png"
+        <img src="./images/f-banner.png"
             class="w-full h-[60vh] object-containt absolute top-[-50%] left-0 -z-10 opacity-10 hidden md:block" alt="">
         <div class="container py-5 flex w-3/4 flex-col md:flex-row space-y-4 ">
             <div class="mb-3 md:w-1/4 md:text-center">
                 <a href="/" aria-label="Bootstrap">
-                    <img src="images/logo.svg" alt="" class="max-w-[200px] max-h-[100px]">
+                    <img src="./images/logo.svg" alt="" class="max-w-[200px] max-h-[100px]">
                 </a>
             </div>
             <div class="mb-3 md:w-1/4 md:text-center">
@@ -523,9 +558,10 @@
             </div>
         </div>
     </footer>
+    <script src="https://unpkg.com/flowbite@1.5.1/dist/flowbite.js"></script>
     <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
     <script src="./js/home.js" type="module"></script>
-    <script src="/main.js" type="module"></script>
+    <script src="./main.js" type="module"></script>
 </body>
 
 </html>
