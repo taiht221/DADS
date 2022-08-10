@@ -54,6 +54,42 @@
                             <a href="#roadmap"
                                 class="block py-2 pr-4 pl-3 text-white md:bg-transparent md:p-0  md:text-base hover:underline uppercase text-center">ROADMAP</a>
                         </li>
+                        <li id="dropdownDefault" data-dropdown-toggle="dropdown2"
+                            class="text-white focus:ring-4 focus:outline-none focus:ring-blue-300 text-center flex justify-center py-2 md:p-0 md:inline-flex items-center uppercase"
+                            type="button">Community<svg class="ml-2 w-4 h-4" aria-hidden="true" fill="none"
+                                stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M19 9l-7 7-7-7"></path>
+                            </svg></li>
+                        <div id="dropdown2"
+                            class="hidden z-10 w-44 bg-opacity-50 bg-white rounded divide-y divide-gray-100 shadow ">
+                            <ul class="py-1 text-sm text-gray-700 dark:text-gray-200" aria-labelledby="dropdownDefault">
+                                <li>
+                                    <a href="#"
+                                        class="block py-2 px-4 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Discord</a>
+                                </li>
+                                <li>
+                                    <a href="#"
+                                        class="block py-2 px-4 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Telegram</a>
+                                </li>
+                                <li>
+                                    <a href="#"
+                                        class="block py-2 px-4 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Twitter</a>
+                                </li>
+                                <li>
+                                    <a href="#"
+                                        class="block py-2 px-4 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Github</a>
+                                </li>
+                                <li>
+                                    <a href="#"
+                                        class="block py-2 px-4 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Medium</a>
+                                </li>
+                                <li>
+                                    <a href="#"
+                                        class="block py-2 px-4 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Facebook</a>
+                                </li>
+                            </ul>
+                        </div>
                         <!-- <li>
                             <a href="#"
                                 class="block py-2 pr-4 pl-3 text-white md:bg-transparent md:p-0  md:text-base hover:underline uppercase text-center">INVESTOR</a>
@@ -90,12 +126,12 @@
                     </p>
                     <div class="flex space-x-5">
                         <button
-                            class="bg-white md:text-2xl text-[#0000FF] rounded-md md:px-4 md:py-2.5 font-medium text-small px-2 py-1.5">
+                            class="bg-white md:text-xl text-[#0000FF] rounded-md md:px-4 md:py-2.5 font-medium text-xs px-2 py-1.5">
                             See More
                         </button>
                         <button id="dropdownDefault" data-dropdown-toggle="dropdown"
-                            class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg px-2 py-1.5 text-2xl md:px-4 md:py-2.5 text-center inline-flex items-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
-                            type="button">Join now <svg class="ml-2 w-4 h-4" aria-hidden="true" fill="none"
+                            class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg px-2 py-1.5 text-xl md:px-4 md:py-2.5 text-center inline-flex items-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
+                            type="button">Join now<svg class="ml-2 w-4 h-4" aria-hidden="true" fill="none"
                                 stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
                                     d="M19 9l-7 7-7-7"></path>
@@ -143,7 +179,9 @@
                         <p class="text-white font-light md:fs-5 text-left md:w-3/4 pb-3">We integrate Ethereum ecosystem
                             and
                             other EVM ecosystem such as Binance Smart Chain and Aurora (NEAR).</p>
-                        <img src="./images/logos.png" alt="logo" class="w-[100px]">
+                        <div class="flex"><img src="./images/logos.png" alt="logo" class="w-[100px] "><strong
+                                class="text-white text-2xl" style="margin: auto 0;">+</strong></div>
+
                         <h3 class="uppercase text-white font-bold md:text-xl pb-3">State channel</h3>
                         <p class="text-white font-light md:fs-5 text-left md:w-3/4 pb-3">A DADS layer 2 solution to
                             process
@@ -167,16 +205,17 @@
                         class="aboutUs-card relative p-[35px] bg-[url('./images/about-layer.png')] bg-no-repeat md:w-1/2 hidden md:block">
                         <!-- <img src="./images/about-layer.png" alt=""
                             class="absolute top-0 left-0 w-100 h-100 aboutUs-card__img object-cover"> -->
-                        <div class="aboutUs-card__content text-white h-[80%] md:w-[60%] m-auto">
-                            <a class="md:w-[185px] md:h-[80px] pb-3 hidden md:block mx-auto md:mb-6 mt-[35px]" href="#">
+                        <div class="aboutUs-card__content text-white h-[80%] md:w-[60%] m-auto flex items-center">
+                            <div class="md:w-[300px] md:h-[100px] pb-3 hidden md:block mx-auto md:mb-6 mt-[35px]"
+                                href="#">
                                 <img src="./images/logo.svg" alt="DADS">
-                            </a>
+                            </div>
                             <!-- <h3 class="text-white font-bold text-center md:my-3">Layer 1: Near</h3> -->
-                            <p class="text-white font-light text-sm md:text-base">
+                            <!-- <p class="text-white font-light text-sm md:text-base">
                                 We are working towards a multi-chain web3 ad platform for advertisers, publishers and
                                 users with any chain and fully decentralized network that hosts privacy data, contents
                                 and more.
-                            </p>
+                            </p> -->
                         </div>
                     </div>
                 </div>
@@ -204,10 +243,11 @@
             <section class="flex flex-col items-center justify-center md:mt-[10rem] mt-2">
                 <div class="flex md:w-3/4">
                     <div class="ourProject-text">
+                        <img src="./images/product.png" alt="">
                         <h2 class="text-white text-center uppercase font-bold title py-4 text-2xl md:text-5xl">product
                         </h2>
-                        <p class="text-white fw-lighter fs-6 pb-3 text-left ">DADS Ad Platform focuses on 3 main parts:
-                            Advertiser, Publisher, User dashboard.</p>
+                        <!-- <p class="text-white fw-lighter fs-6 pb-3 text-left ">DADS Ad Platform focuses on 3 main parts:
+                            Advertiser, Publisher, User dashboard.</p> -->
                     </div>
                 </div>
                 <div class="md:w-3/4 flex md:flex-row md:items-center justify-between space-x-5 md:space-x-0">
