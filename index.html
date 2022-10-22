@@ -15,9 +15,9 @@
 </head>
 
 <body>
-    <header class="active bg-[#141414] p-0 text-base">
+    <header class="p-0 text-base">
         <nav class="bg-transparent  sm:px-4 w-full">
-            <div class="container-fluid flex flex-wrap items-center mx-auto justify-between">
+            <div class="container-fluid flex flex-wrap items-center mx-auto justify-between pl-6">
                 <a href="/" class="flex items-center logo md:w-[150px] md:h-[100px] ">
                     <img src="./images/logo.svg" class="mr-3 md:h-full md:w-full" alt="DADS Logo">
                 </a>
@@ -40,27 +40,24 @@
 
                 <div class="hidden flex-auto md:block md:w-4/6 w-full " id="mobile-menu">
                     <ul
-                        class="flex flex-col mt-4 md:flex-row md:space-x-8 md:mt-0 md:text-base md:font-medium justify-center">
-                        <li>
-                            <a href="#aboutus"
-                                class="block py-2 pr-4 pl-3 text-white md:bg-transparent md:p-0  md:text-base hover:underline uppercase text-center"
-                                aria-current="page">About us</a>
-                        </li>
+                        class="flex flex-col  mt-4 md:flex-row md:space-x-8 md:mt-0 md:text-base md:font-medium justify-center items-center">
                         <li>
                             <a href="#product"
-                                class="block py-2 pr-4 pl-3 text-white md:bg-transparent md:p-0  md:text-base hover:underline uppercase text-center">PRODUCT</a>
+                                class="block py-2 pr-4 pl-3 text-white md:bg-transparent md:p-0  md:text-base hover:underline  text-center"
+                                aria-current="page">Product</a>
                         </li>
                         <li>
                             <a href="#roadmap"
-                                class="block py-2 pr-4 pl-3 text-white md:bg-transparent md:p-0  md:text-base hover:underline uppercase text-center">ROADMAP</a>
+                                class="block py-2 pr-4 pl-3 text-white md:bg-transparent md:p-0  md:text-base hover:underline  text-center">Roadmap</a>
                         </li>
                         <li id="dropdownDefault" data-dropdown-toggle="dropdown2"
-                            class="text-white focus:ring-4 focus:outline-none focus:ring-blue-300 text-center flex justify-center py-2 md:p-0 md:inline-flex items-center uppercase"
+                            class="text-white focus:ring-4 focus:outline-none focus:ring-blue-300 text-center flex justify-center py-2 md:p-0 md:inline-flex items-center "
                             type="button">Community<svg class="ml-2 w-4 h-4" aria-hidden="true" fill="none"
                                 stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
                                     d="M19 9l-7 7-7-7"></path>
-                            </svg></li>
+                            </svg>
+                        </li>
                         <div id="dropdown2"
                             class="hidden z-10 w-44 bg-opacity-50 bg-white rounded divide-y divide-gray-100 shadow ">
                             <ul class="py-1 text-sm text-gray-700 dark:text-gray-200" aria-labelledby="dropdownDefault">
@@ -90,22 +87,20 @@
                                 </li>
                             </ul>
                         </div>
-                        <!-- <li>
-                            <a href="#"
-                                class="block py-2 pr-4 pl-3 text-white md:bg-transparent md:p-0  md:text-base hover:underline uppercase text-center">INVESTOR</a>
+                        <li>
+                            <a href="#advertisers"
+                                class="btn-g rounded-sm block text-white md:bg-transparent md:p-[5px]  md:text-base text-center ">Advertisers</a>
                         </li>
                         <li>
-                            <a href="#"
-                                class="block py-2 pr-4 pl-3 text-white md:bg-transparent md:p-0  md:text-base hover:underline uppercase text-center">TEAM</a>
+                            <a href="#roadmap"
+                                class="btn-g block text-white md:bg-transparent md:p-[5px]  md:text-base text-center ">Web3
+                                Projects</a>
                         </li>
                         <li>
-                            <a href="#"
-                                class="block py-2 pr-4 pl-3 text-white md:bg-transparent md:p-0  md:text-base hover:underline uppercase text-center">NEWS</a>
-                        </li> -->
-                        <!-- <li>
-                            <a href="#"
-                                class="block py-2 pr-4 pl-3 text-white md:bg-transparent md:p-0  md:text-base hover:underline uppercase text-center">Contact</a>
-                        </li> -->
+                            <a href="#roadmap"
+                                class="btn-g block text-white md:bg-transparent md:p-[5px]  md:text-base text-center ">Wallet
+                                ad viewers</a>
+                        </li>
                     </ul>
                 </div>
             </div>
@@ -117,46 +112,25 @@
         <div class="container md:w-8/12 w-full">
             <section class="banner flex flex-col md:flex-row h-[60vh] ">
                 <div class="banner-text md:w-1/2 flex flex-col justify-center space-y-5">
-                    <h2 class="font-bold md:text-[50px] text-2xl sologan uppercase leading-normal">
-                        Reinvent Web3 <br> Advertising
+                    <p class="font-bold md:text-[20px] text-xl uppercase leading-normal text-[#9adbec]">
+                        Multi-chain</p>
+                    <h2 class="font-bold md:text-[35px] text-2xl sologan uppercase leading-normal">
+                        USER-REWARD WEB3 <br> Advertising PLAFORM
                     </h2>
-                    <p class="text-1xl font-light rounded-md py-2">
-                        DADS Network - A multi-chain web3 advertising platform bringing more valuable ads to users,
-                        advertisers, web3 projects.
+                    <p class="text-1xl rounded-md py-2 font-bold">
+                        D.ADS Network is the first user-reward web3 advertising network integrated D.ADS Unified
+                        User-Reward ID built for rewarding wallet call viewers, powered by web3 marketing & advertising
+                        community
                     </p>
                     <div class="flex space-x-5">
                         <button
-                            class="bg-white md:text-xl text-[#0000FF] rounded-md md:px-4 md:py-2.5 font-medium text-xs px-2 py-1.5">
-                            <a href="https://docs.dadsnetwork.co/">White Paper</a>
+                            class="btn-g text-white md:text-xl rounded-lg md:px-5 md:py-3 font-medium text-xs p-[10px] md:w-[200px]">
+                            <a href="https://docs.dadsnetwork.co/">Docs</a>
                         </button>
-                        <button id="dropdownDefault" data-dropdown-toggle="dropdown"
-                            class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg px-2 py-1.5 text-xl md:px-4 md:py-2.5 text-center inline-flex items-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
-                            type="button">Join now<svg class="ml-2 w-4 h-4" aria-hidden="true" fill="none"
-                                stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                    d="M19 9l-7 7-7-7"></path>
-                            </svg></button>
-                        <!-- Dropdown menu -->
-                        <div id="dropdown"
-                            class="hidden z-10 w-44 bg-white rounded divide-y divide-gray-100 shadow dark:bg-gray-700">
-                            <ul class="py-1 text-sm text-gray-700 dark:text-gray-200" aria-labelledby="dropdownDefault">
-                                <li>
-                                    <a href="https://docs.dadsnetwork.co/guideline/advertisers"
-                                        class="block py-2 px-4 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">For
-                                        Advertisers</a>
-                                </li>
-                                <li>
-                                    <a href="https://docs.dadsnetwork.co/guideline/publishers"
-                                        class="block py-2 px-4 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">For
-                                        Web3 Projects</a>
-                                </li>
-                                <li>
-                                    <a href="https://docs.dadsnetwork.co/guideline/users/how-it-works"
-                                        class="block py-2 px-4 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">For
-                                        Users</a>
-                                </li>
-                            </ul>
-                        </div>
+                        <button
+                            class="text-white md:text-xl rounded-lg md:px-5 md:py-3.5 font-medium text-xs p-[10px] border-[#be10ef] border-[1px] md:w-[200px]">
+                            <a href="https://docs.dadsnetwork.co/">Private sale</a>
+                        </button>
                     </div>
                 </div>
                 <!-- <div class="banner-earth relative md:w-1/2 earth-shape">
@@ -613,7 +587,6 @@
     <script src="https://unpkg.com/flowbite@1.5.1/dist/flowbite.js"></script>
     <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
     <script src="./js/home.js" type="module"></script>
-    <script src="./main.js" type="module"></script>
 </body>
 
 </html>
