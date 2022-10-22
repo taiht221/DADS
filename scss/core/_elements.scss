@@ -147,3 +147,11 @@
     background-position: right center; /* change the direction of the change here */
   }
 }
+header {
+  .btn-g {
+    @include mobile {
+      background-image: unset;
+      box-shadow: unset;
+    }
+  }
+}
