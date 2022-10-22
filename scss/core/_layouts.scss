@@ -35,10 +35,9 @@ input::-moz-placeholder {
 
 body {
   background: rgb(0, 19, 53);
-  background: radial-gradient(
-    circle,
-    rgba(0, 19, 53, 0.9) 40%,
-    rgba(0, 4, 12, 1) 80%
-  );
-  background: linear-gradient(to right, black, rgba(0, 19, 53, 0.9) 50%, black);
+  background-image: linear-gradient(to right, #17151c, #12043b);
+}
+b-gradient {
+  background: rgb(0, 19, 53);
+  background-image: linear-gradient(to right, #16062c, #100534);
 }
