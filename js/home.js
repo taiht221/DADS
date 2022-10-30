@@ -62,7 +62,6 @@ import '../scss/pages/home.scss'
     document.getElementById('day').innerHTML = days
     document.getElementById('hour').innerHTML = hours
     document.getElementById('min').innerHTML = minutes
-    document.getElementById('sec').innerHTML = seconds
     // If the count down is over, write some text
     if (distance < 0) {
       clearInterval(x)
