@@ -6,7 +6,7 @@ module.exports = defineConfig({
     rollupOptions: {
       input: {
         main: resolve(__dirname, 'index.html'),
-        // postDetails: resolve(__dirname, 'post-details.html'),
+        presale: resolve(__dirname, 'presale.html'),
         // addEditPost: resolve(__dirname, 'add-edit-post.html'),
       },
     },

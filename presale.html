@@ -15,6 +15,9 @@
 </head>
 
 <body>
+    <div
+        class="bg-[url('./images/bg2.jpg')] h-[100vh] bg-contain bg-right bg-no-repeat absolute top-0 left-0 -z-10 w-full">
+    </div>
     <header class="p-0 text-base">
         <nav class="bg-transparent  sm:px-4 w-full">
             <div class="container-fluid flex flex-wrap items-center mx-auto justify-between pl-6">
@@ -110,19 +113,41 @@
 
     <main class="homepage pt-[20vh]">
         <div class="container md:w-8/12 w-full">
-            <section class="banner flex flex-col md:flex-row h-[50vh] items-center">
-                <div class="banner-text md:w-1/2 flex flex-col justify-center space-y-5">
-                    <p class="font-bold md:text-[20px] text-xl uppercase leading-normal text-[#9adbec]">
-                        Multi-chain</p>
-                    <h2 class="font-bold md:text-[35px] text-2xl sologan uppercase leading-normal">
-                        USER-REWARD WEB3 <br> Advertising PLAFORM
+            <section class="banner flex flex-col md:flex-row h-[60vh] items-center">
+                <div class="banner-text md:w-1/2 ">
+                    <h2 class="font-bold md:text-[35px] text-2xl sologan uppercase leading-normal mb-20">
+                        Private Sale
                     </h2>
-                    <p class="text-1xl rounded-md py-2 font-bold">
-                        D.ADS Network is the first user-reward web3 advertising network integrated D.ADS Unified
-                        User-Reward ID built for rewarding wallet call viewers, powered by web3 marketing & advertising
-                        community
-                    </p>
-                    <div class="flex space-x-5">
+                    <div class="flex md:w-full md:flex-row  b-gradient flex-col md:px-0 px-[15px] md:space-x-4 mb-20">
+                        <div
+                            class="flex flex-col  space-y-3  w-3/4 py-2 pt-4 md:px-0 bg-[#060E55] rounded-xl shadow-lg shadow-indigo-500/50">
+                            <h3 class="text-center">Private Sale starts in </h3>
+                            <div class="flex items-center justify-center text-center">
+                                <div class="flex flex-col p-2 bg-neutral rounded-box text-neutral-content">
+                                    <span class="countdown text-3xl  text-[#FA04FF] font-bold rounded-md p-2">
+                                        <span id="day"></span>
+                                    </span>
+                                    days
+                                </div>
+                                <div class="font-bold p-[5px] text-xl">:</div>
+                                <div class="flex flex-col p-2 bg-neutral rounded-box text-neutral-content">
+                                    <span class="countdown text-3xl  text-[#FA04FF] font-bold rounded-md p-2">
+                                        <span id="hour"></span>
+                                    </span>
+                                    hours
+                                </div>
+                                <div class="font-bold p-[5px] text-xl">:</div>
+                                <div class="flex flex-col p-2 bg-neutral rounded-box text-neutral-content">
+                                    <span class="countdown text-3xl  text-[#FA04FF] font-bold rounded-md p-2">
+                                        <span id="min"></span>
+                                    </span>
+                                    min
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="flex space-x-5 ">
                         <button
                             class="btn-g text-white md:text-xl rounded-lg md:px-5 md:py-3 font-medium text-xs p-[10px] md:w-[200px] w-full">
                             <a href="https://docs.dadsnetwork.co/">Docs</a>
@@ -139,60 +164,8 @@
                         class="absolute top-[0] right-1/2 w-14 h-14 z-10 opacity-70 hidden md:block">
                 </div> -->
                 <div class="md:w-1/2 md:visible invisible">
-                    <div class="earth relative">
-                        <div></div>
-                    </div>
                 </div>
 
-            </section>
-            <section class="flex flex-col items-center justify-center md:mt-[8rem] mt-2" id="aboutus">
-                <div class="flex mb-6">
-                    <div class="ourProject-text">
-                        <h2
-                            class="text-white text-center uppercase font-bold title py-4 text-2xl md:text-4xl md:mb-[1rem]">
-                            Private sale
-                        </h2>
-                    </div>
-                </div>
-                <div
-                    class="flex md:w-full md:flex-row items-center justify-center b-gradient flex-col md:px-0 px-[15px] md:space-x-4">
-                    <p class="text-white font-light md:fs-5 pb-3 md:mb-[1rem]">
-                        D.ADS Network currently opens for private sale <br />
-                        Total raise: 500,000 USD <br />
-                        Token sale: There will be 250,000 tokens sold as price of 0.012 USDT<br />
-                        10% BONUS PURCHASE END IN
-                    </p>
-                    <div class="flex flex-col items-center justify-center space-y-5 md:w-1/2 w-full px-2 md:px-0">
-                        <h3 class="text-center">Days left</h3>
-                        <div class="flex items-center justify-center text-center">
-                            <div class="flex flex-col p-2 bg-neutral rounded-box text-neutral-content">
-                                <span class="countdown text-3xl bg-white text-black font-light rounded-md p-2">
-                                    <span id="day"></span>
-                                </span>
-                                days
-                            </div>
-                            <div class="font-bold p-[5px] text-xl">:</div>
-                            <div class="flex flex-col p-2 bg-neutral rounded-box text-neutral-content">
-                                <span class="countdown text-3xl bg-white text-black font-light rounded-md p-2">
-                                    <span id="hour"></span>
-                                </span>
-                                hours
-                            </div>
-                            <div class="font-bold p-[5px] text-xl">:</div>
-                            <div class="flex flex-col p-2 bg-neutral rounded-box text-neutral-content">
-                                <span class="countdown text-3xl bg-white text-black font-light rounded-md p-2">
-                                    <span id="min"></span>
-                                </span>
-                                min
-                            </div>
-                        </div>
-                        <button
-                            class="btn-g text-white md:text-xl rounded-lg md:px-3 md:py-1 font-medium text-xs p-[10px] md:w-[200px] w-full">
-                            <a href="https://docs.dadsnetwork.co/">Join now</a>
-                        </button>
-                    </div>
-
-                </div>
             </section>
             <section class="flex flex-col items-center justify-center md:mt-[8rem] mt-2" id="aboutus">
                 <div class="flex mb-6">
