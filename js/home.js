@@ -44,6 +44,7 @@ import '../scss/pages/home.scss'
       delay: 2500,
       disableOnInteraction: false,
     },
+    loop: true,
   })
   function toggleNav() {
     headerNav.querySelector('.hambuger').addEventListener('click', () => {
@@ -55,9 +56,7 @@ import '../scss/pages/home.scss'
 ;(() => {
   /// Set the date we're counting down to
   var countDownDate = new Date('Jan 5, 2024 15:37:25').getTime()
-
-  // Update the count down every 1 second
-  var x = setInterval(function () {
+  function countDown() {
     // Get today's date and time
     var now = new Date().getTime()
 
@@ -70,6 +69,20 @@ import '../scss/pages/home.scss'
       (distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)
     )
     var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60))
+    if (hours.toString().length === 1) {
+      var hours =
+        '0' + Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60))
+    } else {
+      var hours = Math.floor(
+        (distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)
+      )
+    }
+    if (minutes.toString().length === 1) {
+      var minutes =
+        '0' + Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60))
+    } else {
+      var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60))
+    }
     var seconds = Math.floor((distance % (1000 * 60)) / 1000)
 
     // Output the result in an element with id="demo"
@@ -79,9 +92,14 @@ import '../scss/pages/home.scss'
     // If the count down is over, write some text
     if (distance < 0) {
       clearInterval(x)
-      document.getElementById('demo').innerHTML = 'EXPIRED'
+      document.getElementById('day').innerHTML = '00'
+      document.getElementById('hour').innerHTML = '00'
+      document.getElementById('min').innerHTML = '00'
     }
-  }, 1000)
+  }
+  countDown()
+  // Update the count down every 1 second
+  var x = setInterval(countDown, 60000)
 })()
 
 if (document.getElementById('copyButton')) {
