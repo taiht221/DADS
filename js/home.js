@@ -31,6 +31,20 @@ import '../scss/pages/home.scss'
     },
   })
 
+  var swiper2 = new Swiper('#netSwiper', {
+    pagination: {
+      el: '.swiper-pagination2',
+      dynamicBullets: true,
+    },
+    spaceBetween: 20,
+    allowTouchMove: true,
+    slidesPerView: 1,
+    centeredSlides: false,
+    autoplay: {
+      delay: 2500,
+      disableOnInteraction: false,
+    },
+  })
   function toggleNav() {
     headerNav.querySelector('.hambuger').addEventListener('click', () => {
       headerNav.querySelector('#mobile-menu').classList.toggle('hidden')
@@ -70,14 +84,16 @@ import '../scss/pages/home.scss'
   }, 1000)
 })()
 
-document.getElementById('copyButton').addEventListener('click', () => {
-  // Get the text field
-  var copyText = document.getElementById('copyInput')
+if (document.getElementById('copyButton')) {
+  document.getElementById('copyButton').addEventListener('click', () => {
+    // Get the text field
+    var copyText = document.getElementById('copyInput')
 
-  // Select the text field
-  copyText.select()
-  copyText.setSelectionRange(0, 99999) // For mobile devices
+    // Select the text field
+    copyText.select()
+    copyText.setSelectionRange(0, 99999) // For mobile devices
 
-  // Copy the text inside the text field
-  navigator.clipboard.writeText(copyText.value)
-})
+    // Copy the text inside the text field
+    navigator.clipboard.writeText(copyText.value)
+  })
+}
