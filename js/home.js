@@ -46,6 +46,23 @@ import '../scss/pages/home.scss'
     },
     loop: true,
   })
+
+  var swiper3 = new Swiper('#communitySwiper', {
+    pagination: {
+      el: '.swiper-pagination2',
+      dynamicBullets: true,
+    },
+    spaceBetween: 20,
+    allowTouchMove: true,
+    slidesPerView: 1,
+    centeredSlides: false,
+    autoplay: {
+      delay: 2500,
+      disableOnInteraction: false,
+    },
+    loop: true,
+  })
+
   function toggleNav() {
     headerNav.querySelector('.hambuger').addEventListener('click', () => {
       headerNav.querySelector('#mobile-menu').classList.toggle('hidden')
