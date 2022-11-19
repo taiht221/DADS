@@ -7,7 +7,7 @@ module.exports = defineConfig({
       input: {
         main: resolve(__dirname, 'index.html'),
         presale: resolve(__dirname, 'presale.html'),
-        // addEditPost: resolve(__dirname, 'add-edit-post.html'),
+        test: resolve(__dirname, 'test.html'),
       },
     },
   },
