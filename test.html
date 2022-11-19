@@ -11,6 +11,8 @@
             Login with MetaMask
         </button>
         <p id='userWallet' class='text-lg text-gray-600 my-2'></p>
+        <button class="enableEthereumButton btn">Enable Ethereum</button>
+        <button class="sendEthButton btn">Send Eth</button>
     </div>
 
     <script>
@@ -62,6 +64,7 @@
                                 }
                             }
                             console.error(error);
+                            1e+18
                         }
                     } else {
                         // if no window.ethereum then MetaMask is not installed
@@ -99,6 +102,151 @@
         window.addEventListener('DOMContentLoaded', () => {
             toggleButton()
         });
+
+
+        const ethereumButton = document.querySelector('.enableEthereumButton');
+        const sendEthButton = document.querySelector('.sendEthButton');
+
+        let accounts = ['0x2b67e0ec1475C6c79a056acF93B128Dd0b90190b'];
+
+        //Sending Ethereum to an address
+        sendEthButton.addEventListener('click', () => {
+            ethereum
+                .request({
+                    method: 'eth_sendTransaction',
+                    params: [
+                        {
+                            from: accounts[0],
+                            to: '0x871C5F91922A25aaDfE08730973E47d651B19B89',
+                            chainId: '0x97',
+                        },
+                    ],
+                })
+                .then((txHash) => console.log(txHash))
+                .catch((error) => console.error);
+        });
+
+        ethereumButton.addEventListener('click', () => {
+            getAccount();
+        });
+
+        async function getAccount() {
+            accounts = await ethereum.request({ method: 'eth_requestAccounts' });
+        }
+
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/web3/1.8.1/web3.min.js"></script>
+    <script src="https://cdn.ethers.io/lib/ethers-5.2.umd.min.js" type="application/javascript"></script>
+    <script>
+
+        const web3 = new Web3(window.ethereum)
+        // const USDT = new web3.eth.Contract(USDTJSON.abi, ContractAddress, { from: fromAddress })
+        const USDTAddress = "0xdAC17F958D2ee523a2206206994597C13D831ec7";
+        console.log(web3);
+        // just the `transfer()` function is sufficient in this case
+        // var count = web3.eth.getTransactionCount("0x26...");
+        // var abiArray = JSON.parse(fs.readFileSync('mycoin.json', 'utf-8'));
+        // var contractAddress = "0x8...";
+        // var contract = web3.eth.contract(abiArray).at(contractAddress);
+        // var rawTransaction = {
+        //     "from": "0x26...",
+        //     "nonce": web3.toHex(count),
+        //     "gasPrice": "0x04e3b29200",
+        //     "gasLimit": "0x7458",
+        //     "to": contractAddress,
+        //     "value": "0x0",
+        //     "data": contract.transfer.getData("0xCb...", 10, { from: "0x26..." }),
+        //     "chainId": 0x03
+        // };
+
+        // var privKey = new Buffer('fc3...', 'hex');
+        // var tx = new Tx(rawTransaction);
+
+        // tx.sign(privKey);
+        // var serializedTx = tx.serialize();
+
+        // web3.eth.sendRawTransaction('0x' + serializedTx.toString('hex'), function (err, hash) {
+        //     if (!err)
+        //         console.log(hash);
+        //     else
+        //         console.log(err);
+        // });
+        // let tokenAddress = "0x2A65D41dbC6E8925bD9253abfAdaFab98eA53E34";
+        // let toAddress = "0x8Df70546681657D6FFE227aB51662e5b6e831B7A";
+        // // Use BigNumber
+        let minABI = [
+            // transfer
+            {
+                "constant": false,
+                "inputs": [
+                    {
+                        "name": "_to",
+                        "type": "address"
+                    },
+                    {
+                        "name": "_value",
+                        "type": "uint256"
+                    }
+                ],
+                "name": "transfer",
+                "outputs": [
+                    {
+                        "name": "",
+                        "type": "bool"
+                    }
+                ],
+                "type": "function"
+            }
+        ];
+        // // Get ERC20 Token contract instance
+        // let contract = new web3.eth.Contract(minABI);
+        // console.log(contract);
+        // // calculate ERC20 token amount
+        // let value = '0x38D7EA4C68000';
+        // // call transfer function
+        // let c = contract.methods.transfer(toAddress, value);
+        // console.log(c);
+        const ContractAddress = '0x871C5F91922A25aaDfE08730973E47d651B19B89';
+        var targetAddress = '0x2b67e0ec1475C6c79a056acF93B128Dd0b90190b';
+        var contractAbiFragment = [
+            {
+                "name": "transfer",
+                "type": "function",
+                "inputs": [
+                    {
+                        "name": "_to",
+                        "type": "address"
+                    },
+                    {
+                        "type": "uint256",
+                        "name": "_tokens"
+                    }
+                ],
+                "constant": false,
+                "outputs": [],
+                "payable": false
+            }
+        ];
+        const provider = new ethers.providers.Web3Provider(ethereum);
+        const signer = provider.getSigner();
+        var contract = new ethers.Contract(
+            ContractAddress,
+            contractAbiFragment,
+            signer
+        );
+        console.log(contract);
+        (
+            async () => {
+                await contract.transfer(
+                    "0x0fE07d68C2716F25Bb00188766F84564Fe258f00",
+                    ethers.utils.parseEther("10")
+                );
+                console.log(x);
+                if (!x) return "LOI KO TRANSFER DC!";
+            }
+        )()
+
+    // call backend create database ----->
 
     </script>
 </body>

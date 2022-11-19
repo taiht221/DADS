@@ -1,7 +1,7 @@
 import axios from 'axios'
 
 const axiosClient = axios.create({
-  baseURL: 'https://js-post-api.herokuapp.com/api',
+  baseURL: 'https://openapi.zalo.me/v2.0/oa',
   headers: {
     'Content-Type': 'application/json',
   },
@@ -13,8 +13,7 @@ axiosClient.interceptors.request.use(
     // Do something before request is sent
 
     // Attach token to request if exists
-    const accessToken = localStorage.getItem('access-token')
-    if (accessToken) config.headers.Authorization = `Bearer ${accessToken}`
+    config.headers.Authorization = `Bearer n`
 
     return config
   },
@@ -33,10 +32,10 @@ axiosClient.interceptors.response.use(
   },
   function (error) {
     // Do something with response error
-    if (!error.response) throw new Error('Some thing went gone. Please try again!')
+    console.log(error)
 
     // Unauthorize redirect to login
-    if (error.response.status === 401) window.location.assign('/login.html')
+    // if (error.response.status === 401) window.location.assign('/login.html')
 
     // Any status codes that falls outside the range of 2xx cause this function to trigger
     return Promise.reject(error)
