@@ -167,7 +167,7 @@
                 </div>
 
             </section>
-            <section class="flex flex-col items-center  md:mt-[8rem] mt-2" id="aboutus">
+            <section class="flex flex-col items-center  md:mt-[6rem] mt-2" id="aboutus">
                 <div class="flex mb-6">
                     <div class="ourProject-text">
                         <h2
@@ -182,46 +182,108 @@
                 <div
                     class="flex flex-col space-y-3 w-2/4 bg-[#060E55] rounded-xl shadow-lg shadow-indigo-500/50 p-[30px] mb-5">
                     <div class="mb-6">
-                        <label for="default-input"
-                            class="block mb-2 text-sm font-medium text-white dark:text-white">Your
+                        <label for="DADS" class="block mb-2 text-sm font-medium text-white dark:text-white">Your
                             Investment</label>
-                        <input type="text" id="default-input"
-                            class="bg-purple-700 border border-black-300 text-white-900 text-sm rounded-lg focus:ring-violet-500 focus:border-violet-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-white dark:text-white dark:focus:ring-violet-500 dark:focus:border-violet-500">
+                        <input type="text" id="DADS" class=" bg-purple-700 border border-black-300 text-white-900 text-sm rounded-lg
+                            focus:ring-violet-500 focus:border-violet-500 block w-full p-2.5 dark:bg-gray-700
+                            dark:border-gray-600 dark:placeholder-white dark:text-white dark:focus:ring-violet-500
+                            dark:focus:border-violet-500">
                     </div>
 
                     <div class="flex justify-between items-center">
                         <p class="block mb-2 text-sm font-medium text-white dark:text-white">Presale Token Price</p>
                         <p class="block mb-2 text-sm font-medium text-white dark:text-white">1 DADS = 0.012 USDT</p>
                     </div>
-                </div>
-                <p class="block mb-2 text-sm font-medium text-white dark:text-white text-left">Total in dads
-                    token</p>
-                <div
-                    class="flex flex-col space-y-3 w-2/4 bg-[#060E55] rounded-xl shadow-lg shadow-indigo-500/50 p-[30px] mb-6">
-                    <div class="mb-6">
+                    <p class="block mb-2 text-sm font-medium text-white dark:text-white text-left">Total USDT</p>
+                    <div class="flex flex-col space-y-3 ">
 
-                        <input type="text" id="default-input"
+                        <input type="text" id="USDT" disabled value="11"
                             class="bg-purple-700 border border-black-300 text-white-900 text-sm rounded-lg focus:ring-violet-500 focus:border-violet-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-white dark:text-white dark:focus:ring-violet-500 dark:focus:border-violet-500">
+
                     </div>
                 </div>
-                <div class="flex w-3/4 justify-center mb-6">
+
+
+                <div class="flex w-2/4 justify-center mb-6">
                     <input checked id="checked-checkbox" type="checkbox" value=""
                         class="w-4 h-4 text-blue-600 bg-gray-100 rounded border-gray-300 focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600">
-                    <label for="checked-checkbox" class="ml-2 text-sm font-medium text-white dark:text-gray-300 ">I
+                    <label for="checked-checkbox" class="ml-2 text-sm font-medium text-white dark:text-gray-300">I
                         agree
                         to term of services (including purchaser's citizenship and or residency restriction) and
                         Privacy
                         Policy</label>
                 </div>
-
+                <div class="flex w-2/4 justify-center mb-6">
+                    <p class="block mb-2 text-sm font-medium text-gray-500 dark:text-white text-left">You need
+                        to
+                        login
+                        by
+                        metamask wallet with the network BNB smart chain first before buying dads token</p>
+                </div>
                 <div class="flex space-x-5 ">
-                    <button
+                    <button id="loginButton"
                         class="btn-g text-white md:text-xl rounded-lg md:px-5 md:py-3 font-medium text-xs p-[10px] md:w-[200px] w-full">
-                        <a href="https://docs.dadsnetwork.co/">Docs</a>
+                        Buy
                     </button>
                 </div>
             </section>
-            <section class="flex flex-col items-center  md:mt-[8rem] mt-2" id="aboutus">
+            <section class="flex flex-col items-center  md:mt-[6rem] mt-2" id="aboutus">
+                <div class="flex mb-6">
+                    <div class="ourProject-text">
+                        <h2
+                            class="text-white text-center uppercase font-bold title py-4 text-2xl md:text-4xl md:mb-[1rem]">
+                            Your Balance
+                        </h2>
+                    </div>
+                </div>
+
+                <div
+                    class="flex flex-col space-y-5 w-3/4 bg-[#060E55] rounded-xl shadow-lg shadow-indigo-500/50 p-[30px] mb-5 ">
+                    <div class="flex items-center justify-between">
+                        <div class="flex space-x-2 items-center">
+                            <p class="text-sm font-medium text-white dark:text-white text-left">Total your DADS
+                                token:</p><span class="text-gray-500 font-medium">1,000 DADS</span>
+                        </div>
+
+                        <div class="flex space-x-2 items-center">
+                            <p class="text-sm font-medium text-white dark:text-white text-left">Buying Price:</p><span
+                                class="text-gray-500 font-medium">0.012 USDT</span>
+                        </div>
+                    </div>
+                    <div class="flex items-center justify-between">
+                        <div class="flex space-x-2 items-center">
+                            <p class="text-sm font-medium text-white dark:text-white text-left">Buying time:</p><span
+                                class="text-gray-500 font-medium">21:45 20/12/2022</span>
+                        </div>
+
+                        <div class="flex space-x-2 items-center">
+                            <p class="text-sm font-medium text-white dark:text-white text-left">Referral income:</p>
+                            <span class="text-gray-500 font-medium">50 DADS</span>
+                        </div>
+                    </div>
+                    <div class="flex items-center justify-between">
+                        <div class="flex space-x-2 items-center">
+                            <p class="text-sm font-medium text-white dark:text-white text-left">Vesting:</p><span
+                                class="text-gray-500 font-medium">5% TGE, 3 months Cliff, Monthly Linear Vesting Over 9
+                                Months</span>
+                        </div>
+                    </div>
+                    <div class="flex items-center justify-between">
+                        <div class="flex space-x-2 items-center">
+                            <p class="text-sm font-medium text-white dark:text-white text-left">
+                                Claiming time:</p><span class="text-gray-500 font-medium">Start from 20/01/2023</span>
+                        </div>
+                    </div>
+                    <div class="flex items-center justify-between">
+                        <div class="flex space-x-2 items-center">
+                            <p class="text-sm font-medium text-white dark:text-white text-left">
+                                User Wallet:</p><span class="text-gray-500 font-medium" id="userWallet">Start from
+                                20/01/2023</span>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="flex flex-col items-center  md:mt-[6rem] mt-2" id="aboutus">
                 <div class="flex mb-6">
                     <div class="ourProject-text">
                         <h2
@@ -232,19 +294,31 @@
                         </p>
                     </div>
                 </div>
-                <div class="flex w-3/4">
+                <div class="flex w-3/4 items-center justify-center">
 
                     <input type="text" id="copyInput"
                         class="rounded-xl w-3/4 bg-gray-100 text-blue-600 border-gray-300 focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600"
                         value="http://referralink123456789.dadsnetwork.io">
                     <button id="copyButton"
-                        class="btn-g text-white md:text-xl rounded-lg md:px-5 md:py-3 font-medium text-xs p-[10px] ">
+                        class="btn-g text-white md:text-sm rounded-lg md:px-5 md:py-3 font-medium text-xs p-[10px] ">
                         Copy</button>
                 </div>
             </section>
-
         </div>
-        <section class="container md:mt-[8rem] " id="roadmap">
+
+        <section class="aboutUs md:mt-[6rem] mt-2">
+            <h2 class="text-white text-center uppercase font-bold py-5 text-2xl md:text-4xl">tokenomic</h2>
+            <div class="flex aboutUs-content flex-col md:flex-row ">
+                <img src="./images/tokenomic.png" alt="DADS" class="object-contain">
+            </div>
+            <div class="flex justify-center">
+                <button
+                    class="btn-g text-white md:text-xl rounded-lg md:px-5 md:py-3 font-medium text-xs p-[10px] md:w-[200px] w-full">
+                    <a href="https://docs.dadsnetwork.co/">Read More</a>
+                </button>
+            </div>
+        </section>
+        <section class="container md:mt-[6rem] " id="roadmap">
             <h3 class="text-white text-center uppercase font-bold title py-4 text-2xl md:text-4xl">PRIVATE SALE TIMELINE
             </h3>
             <div class="relative">
@@ -433,6 +507,7 @@
     <script src="https://unpkg.com/flowbite@1.5.1/dist/flowbite.js"></script>
     <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
     <script src="./js/home.js" type="module"></script>
+    <script src="./js/presale.js" type="module"></script>
 </body>
 
 </html>

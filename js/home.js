@@ -72,7 +72,7 @@ import '../scss/pages/home.scss'
 })()
 ;(() => {
   /// Set the date we're counting down to
-  var countDownDate = new Date('Jan 5, 2024 15:37:25').getTime()
+  var countDownDate = new Date('Dec 20, 2022 15:37:25').getTime()
   function countDown() {
     // Get today's date and time
     var now = new Date().getTime()
@@ -118,17 +118,3 @@ import '../scss/pages/home.scss'
   // Update the count down every 1 second
   var x = setInterval(countDown, 60000)
 })()
-
-if (document.getElementById('copyButton')) {
-  document.getElementById('copyButton').addEventListener('click', () => {
-    // Get the text field
-    var copyText = document.getElementById('copyInput')
-
-    // Select the text field
-    copyText.select()
-    copyText.setSelectionRange(0, 99999) // For mobile devices
-
-    // Copy the text inside the text field
-    navigator.clipboard.writeText(copyText.value)
-  })
-}
