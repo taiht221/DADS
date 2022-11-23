@@ -130,7 +130,30 @@
     }
   }
 }
-
+div.main-btn {
+  cursor: pointer;
+  transition: all 400ms;
+  font-size: 20px;
+  @include mobile {
+    font-size: 10px;
+  }
+  .logo-btn {
+    width: 75px;
+    height: 116px;
+    @include mobile {
+      width: 35px;
+      height: 46px;
+    }
+  }
+  p {
+    background-image: linear-gradient(#1c28e1, #d953f6);
+    border: 1px solid #d953f6;
+    &:hover {
+      background: black;
+      transition: all 400ms;
+    }
+  }
+}
 .btn-g {
   background-image: linear-gradient(
     to right,
