@@ -7,7 +7,6 @@ module.exports = defineConfig({
       input: {
         main: resolve(__dirname, 'index.html'),
         presale: resolve(__dirname, 'presale.html'),
-        test: resolve(__dirname, 'test.html'),
       },
     },
   },
