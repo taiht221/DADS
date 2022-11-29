@@ -1,4 +1,4 @@
-import { contractUSDTAbiFragment, contractBSCSAbiFragment } from './contractAbi'
+import { contractUSDTAbiFragment } from './contractAbi'
   ; (() => {
     const dads = document.getElementById('DADS')
     const usdt = document.getElementById('USDT')
@@ -9,7 +9,6 @@ import { contractUSDTAbiFragment, contractBSCSAbiFragment } from './contractAbi'
     const buyButton = document.getElementById('buyButton')
 
     const ContractAddress = '0x55d398326f99059fF775485246999027B3197955'
-    const ContractTestAddress = '0x0886dC84B4263d3A9420B90CB2b185407a4D41e3'
 
     let targetAddress = '0x2b67e0ec1475C6c79a056acF93B128Dd0b90190b'
     const provider = new ethers.providers.Web3Provider(ethereum)
@@ -82,8 +81,7 @@ import { contractUSDTAbiFragment, contractBSCSAbiFragment } from './contractAbi'
               // check if the chain to connect to is installed
               await window.ethereum.request({
                 method: 'wallet_switchEthereumChain',
-                params: [{ chainId: '0x61' }],
-                // params: [{ chainId: '0x38' }],
+                params: [{ chainId: '0x38' }],
               })
             } catch (error) {
               // This error code indicates that the chain has not been added to MetaMask
@@ -156,7 +154,10 @@ import { contractUSDTAbiFragment, contractBSCSAbiFragment } from './contractAbi'
           ethers.utils.parseEther(amount)
         )
       } catch (error) {
-        if (error) console.log(error.data)
+        if (error.code === -32603) {
+          alert('insufficient balance')
+        }
+        console.log(error)
       }
     }
     buyButton.addEventListener('click', transferToken)
