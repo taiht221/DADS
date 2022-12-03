@@ -7,7 +7,7 @@ import { contractUSDTAbiFragment, contractBSCSAbiFragment } from './contractAbi'
   const userWallet = document.getElementById('userWallet')
   const walletID = document.getElementById('walletID')
   const buyButton = document.getElementById('buyButton')
-  const signOut = document.getElementById('singOutButton')
+
   // const ContractAddress = '0x55d398326f99059fF775485246999027B3197955'
   // const ContractTestAddress = '0x0886dC84B4263d3A9420B90CB2b185407a4D41e3'
 
@@ -121,6 +121,7 @@ import { contractUSDTAbiFragment, contractBSCSAbiFragment } from './contractAbi'
       return
     }
 
+    console.log(accounts)
     window.userWalletAddress = accounts[0]
     userWallet.innerText = window.userWalletAddress
     loginButton.innerText = 'Sign out of MetaMask'
@@ -133,32 +134,276 @@ import { contractUSDTAbiFragment, contractBSCSAbiFragment } from './contractAbi'
 
   // Get value of total DADS buy
   window.ethereum.on('accountsChanged', (accounts) => {
-    console.log('check ac', accounts)
-
     // If user has locked/logout from MetaMask, this resets the accounts array to empty
-    if (accounts.length === 0) {
-      loginButton.innerText = 'Connect with MetaMask'
-      buyButton.setAttribute('disabled', '')
+    if (!accounts.length) {
+      buyButton.setAttribute('disabled')
       buyButton.classList.add('cursor-not-allowed')
       // logic to handle what happens once MetaMask is locked
     } else {
-      const match = e.toString().match(truncateRegex)
-      walletID.textContent = `${match[1]}…${match[2]}`
-      loginButton.innerText = walletID.textContent
       buyButton.removeAttribute('disabled')
       buyButton.classList.remove('cursor-not-allowed')
     }
   })
 
-  const contractUSDTAddress = '0x55d398326f99059fF775485246999027B3197955'
-  const contractTSTAddress = '0x0886dC84B4263d3A9420B90CB2b185407a4D41e3'
+  const ContractAddress = '0x0886dC84B4263d3A9420B90CB2b185407a4D41e3'
   var targetAddress = '0x2b67e0ec1475C6c79a056acF93B128Dd0b90190b'
+  var contractAbiFragment = [
+    { inputs: [], stateMutability: 'nonpayable', type: 'constructor' },
+    {
+      anonymous: false,
+      inputs: [
+        {
+          indexed: true,
+          internalType: 'address',
+          name: 'tokenOwner',
+          type: 'address',
+        },
+        {
+          indexed: true,
+          internalType: 'address',
+          name: 'spender',
+          type: 'address',
+        },
+        {
+          indexed: false,
+          internalType: 'uint256',
+          name: 'tokens',
+          type: 'uint256',
+        },
+      ],
+      name: 'Approval',
+      type: 'event',
+    },
+    {
+      anonymous: false,
+      inputs: [
+        {
+          indexed: true,
+          internalType: 'address',
+          name: 'from',
+          type: 'address',
+        },
+        { indexed: true, internalType: 'address', name: 'to', type: 'address' },
+      ],
+      name: 'OwnershipTransferred',
+      type: 'event',
+    },
+    {
+      anonymous: false,
+      inputs: [
+        {
+          indexed: true,
+          internalType: 'address',
+          name: 'from',
+          type: 'address',
+        },
+        { indexed: true, internalType: 'address', name: 'to', type: 'address' },
+        {
+          indexed: false,
+          internalType: 'uint256',
+          name: 'tokens',
+          type: 'uint256',
+        },
+      ],
+      name: 'Transfer',
+      type: 'event',
+    },
+    {
+      inputs: [],
+      name: 'acceptOwnership',
+      outputs: [],
+      stateMutability: 'nonpayable',
+      type: 'function',
+    },
+    {
+      inputs: [
+        { internalType: 'address', name: 'tokenOwner', type: 'address' },
+        { internalType: 'address', name: 'spender', type: 'address' },
+      ],
+      name: 'allowance',
+      outputs: [
+        { internalType: 'uint256', name: 'remaining', type: 'uint256' },
+      ],
+      stateMutability: 'view',
+      type: 'function',
+    },
+    {
+      inputs: [
+        { internalType: 'address', name: 'spender', type: 'address' },
+        { internalType: 'uint256', name: 'tokens', type: 'uint256' },
+      ],
+      name: 'approve',
+      outputs: [{ internalType: 'bool', name: 'success', type: 'bool' }],
+      stateMutability: 'nonpayable',
+      type: 'function',
+    },
+    {
+      inputs: [
+        { internalType: 'address', name: 'spender', type: 'address' },
+        { internalType: 'uint256', name: 'tokens', type: 'uint256' },
+        { internalType: 'bytes', name: 'data', type: 'bytes' },
+      ],
+      name: 'approveAndCall',
+      outputs: [{ internalType: 'bool', name: 'success', type: 'bool' }],
+      stateMutability: 'nonpayable',
+      type: 'function',
+    },
+    {
+      inputs: [
+        { internalType: 'address', name: 'tokenOwner', type: 'address' },
+      ],
+      name: 'balanceOf',
+      outputs: [{ internalType: 'uint256', name: 'balance', type: 'uint256' }],
+      stateMutability: 'view',
+      type: 'function',
+    },
+    {
+      inputs: [{ internalType: 'uint256', name: 'tokens', type: 'uint256' }],
+      name: 'burn',
+      outputs: [{ internalType: 'bool', name: 'success', type: 'bool' }],
+      stateMutability: 'nonpayable',
+      type: 'function',
+    },
+    {
+      inputs: [],
+      name: 'decimals',
+      outputs: [{ internalType: 'uint8', name: '', type: 'uint8' }],
+      stateMutability: 'view',
+      type: 'function',
+    },
+    {
+      inputs: [
+        { internalType: 'address', name: 'spender', type: 'address' },
+        { internalType: 'uint256', name: 'subtractedTokens', type: 'uint256' },
+      ],
+      name: 'decreaseAllowance',
+      outputs: [{ internalType: 'bool', name: 'success', type: 'bool' }],
+      stateMutability: 'nonpayable',
+      type: 'function',
+    },
+    {
+      inputs: [
+        { internalType: 'address', name: 'spender', type: 'address' },
+        { internalType: 'uint256', name: 'addedTokens', type: 'uint256' },
+      ],
+      name: 'increaseAllowance',
+      outputs: [{ internalType: 'bool', name: 'success', type: 'bool' }],
+      stateMutability: 'nonpayable',
+      type: 'function',
+    },
+    {
+      inputs: [{ internalType: 'uint256', name: 'tokens', type: 'uint256' }],
+      name: 'mint',
+      outputs: [{ internalType: 'bool', name: 'success', type: 'bool' }],
+      stateMutability: 'nonpayable',
+      type: 'function',
+    },
+    {
+      inputs: [
+        { internalType: 'address[]', name: 'to', type: 'address[]' },
+        { internalType: 'uint256[]', name: 'values', type: 'uint256[]' },
+      ],
+      name: 'multiTransfer',
+      outputs: [{ internalType: 'uint256', name: '', type: 'uint256' }],
+      stateMutability: 'nonpayable',
+      type: 'function',
+    },
+    {
+      inputs: [],
+      name: 'name',
+      outputs: [{ internalType: 'string', name: '', type: 'string' }],
+      stateMutability: 'view',
+      type: 'function',
+    },
+    {
+      inputs: [],
+      name: 'newOwner',
+      outputs: [{ internalType: 'address', name: '', type: 'address' }],
+      stateMutability: 'view',
+      type: 'function',
+    },
+    {
+      inputs: [],
+      name: 'owner',
+      outputs: [{ internalType: 'address', name: '', type: 'address' }],
+      stateMutability: 'view',
+      type: 'function',
+    },
+    {
+      inputs: [],
+      name: 'running',
+      outputs: [{ internalType: 'bool', name: '', type: 'bool' }],
+      stateMutability: 'view',
+      type: 'function',
+    },
+    {
+      inputs: [],
+      name: 'startStop',
+      outputs: [{ internalType: 'bool', name: 'success', type: 'bool' }],
+      stateMutability: 'nonpayable',
+      type: 'function',
+    },
+    {
+      inputs: [],
+      name: 'symbol',
+      outputs: [{ internalType: 'string', name: '', type: 'string' }],
+      stateMutability: 'view',
+      type: 'function',
+    },
+    {
+      inputs: [],
+      name: 'totalSupply',
+      outputs: [{ internalType: 'uint256', name: '', type: 'uint256' }],
+      stateMutability: 'view',
+      type: 'function',
+    },
+    {
+      inputs: [
+        { internalType: 'address', name: 'to', type: 'address' },
+        { internalType: 'uint256', name: 'tokens', type: 'uint256' },
+      ],
+      name: 'transfer',
+      outputs: [{ internalType: 'bool', name: 'success', type: 'bool' }],
+      stateMutability: 'nonpayable',
+      type: 'function',
+    },
+    {
+      inputs: [
+        { internalType: 'address', name: 'tokenAddress', type: 'address' },
+        { internalType: 'uint256', name: 'tokens', type: 'uint256' },
+      ],
+      name: 'transferAny20Token',
+      outputs: [],
+      stateMutability: 'nonpayable',
+      type: 'function',
+    },
+    {
+      inputs: [
+        { internalType: 'address', name: 'from', type: 'address' },
+        { internalType: 'address', name: 'to', type: 'address' },
+        { internalType: 'uint256', name: 'tokens', type: 'uint256' },
+      ],
+      name: 'transferFrom',
+      outputs: [{ internalType: 'bool', name: 'success', type: 'bool' }],
+      stateMutability: 'nonpayable',
+      type: 'function',
+    },
+    {
+      inputs: [
+        { internalType: 'address', name: 'transferOwner', type: 'address' },
+      ],
+      name: 'transferOwnership',
+      outputs: [],
+      stateMutability: 'nonpayable',
+      type: 'function',
+    },
+  ]
   const provider = new ethers.providers.Web3Provider(ethereum)
   const signer = provider.getSigner()
 
   var contract = new ethers.Contract(
-    contractTSTAddress,
-    contractBSCSAbiFragment,
+    ContractAddress,
+    contractAbiFragment,
     signer
   )
 
@@ -171,16 +416,20 @@ import { contractUSDTAbiFragment, contractBSCSAbiFragment } from './contractAbi'
         ethers.utils.parseEther(amount)
       )
     } catch (error) {
-      if (error) console.log(error)
+      if (error) console.log(error.data)
     }
   }
   buyButton.addEventListener('click', transferToken)
-
-  function signOutOfMetaMask() {
-    window.userWalletAddress = null
-    loginButton.innerText = 'Connect with MetaMask'
-    buyButton.setAttribute('disabled', '')
-    buyButton.classList.add('cursor-not-allowed')
-  }
-  signOut.addEventListener('click', signOutOfMetaMask)
 })()
+
+// function signOutOfMetaMask() {
+//   window.userWalletAddress = null
+//   userWallet.innerText = ''
+//   loginButton.innerText = 'Sign in with MetaMask'
+
+//   loginButton.removeEventListener('click', signOutOfMetaMask)
+//   setTimeout(() => {
+//     loginButton.addEventListener('click', loginWithMetaMask)
+//   }, 200)
+// }
+1
